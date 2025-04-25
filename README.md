@@ -62,8 +62,6 @@ As a Master’s in Business Analytics student at the University of North Texas I
 **Other:**  
 - Agile Project Management, Microsoft Office Suite
 
-![Skills](./_skills.png)
-
 ---
 
 ## Internship & Employment Experience
