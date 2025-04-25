@@ -78,14 +78,28 @@
       </ul>
     </section>
   </main>
-
+  
   <script>
-    function showSection(id) {
-      document.querySelectorAll("main section").forEach((section) =>
-        section.classList.add("hidden")
-      );
-      document.getElementById(id).classList.remove("hidden");
-    }
-  </script>
+  function showSection(id) {
+    document.querySelectorAll("main section").forEach((section) => {
+      section.classList.add("hidden");
+      section.classList.remove("show");
+    });
+
+    const selectedSection = document.getElementById(id);
+    selectedSection.classList.remove("hidden");
+
+    // Add animation after short delay
+    setTimeout(() => {
+      selectedSection.classList.add("show");
+    }, 100);
+  }
+
+  // Optional: Load the About section by default
+  window.onload = () => {
+    showSection('about');
+  };
+</script>
+
 </body>
 </html>
