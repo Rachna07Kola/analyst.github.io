@@ -3,119 +3,84 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Business Analyst Portfolio</title>
+  <title>Harshitha Business Analyst Portfolio</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header>
-    <h1>Business Analyst Portfolio</h1>
-    <p>Showcasing projects, skills, and professional journey</p>
+    <h1>Harshitha's Business Analyst Portfolio</h1>
+    <p>Blending Data with Strategy & Impact</p>
   </header>
 
   <nav>
-    <button onclick="showSection('about')">About Me</button>
-    <button onclick="showSection('career')">Career Summary</button>
-    <button onclick="showSection('education')">Education & Certifications</button>
+    <button onclick="showSection('about')">About</button>
+    <button onclick="showSection('career')">Career</button>
+    <button onclick="showSection('education')">Education</button>
     <button onclick="showSection('skills')">Skills</button>
     <button onclick="showSection('experience')">Experience</button>
     <button onclick="showSection('projects')">Projects</button>
     <button onclick="showSection('leadership')">Leadership</button>
   </nav>
 
-  <main id="content">
-    <section id="about">
+  <main>
+    <section id="about" class="hidden">
       <h2>About Me</h2>
-      <p>
-        As a Business Analytics graduate student and University of North Texas graduate...
-      </p>
+      <p>I’m Harshitha — a Business Analytics graduate from the University of North Texas, with dual bachelor's degrees in Commerce and Computer Applications. I'm passionate about combining insights from data with creative and strategic decisions. As a national swimmer and analytics enthusiast, I bring discipline and team spirit into everything I do.</p>
     </section>
 
     <section id="career" class="hidden">
       <h2>Career Summary</h2>
-      <p>
-        As a Master’s in Business Analytics student at the University of North Texas...
-      </p>
+      <p>I specialize in data interpretation, predictive analytics, and helping organizations derive actionable insights. With a background in Commerce and Computer Applications, I approach problems analytically and creatively.</p>
     </section>
 
     <section id="education" class="hidden">
-  <h2 class="text-2xl font-semibold mb-4">Education & Certifications</h2>
-  
-  <div class="mb-6">
-    <h3 class="text-xl font-bold text-blue-600">University of North Texas, Denton, TX</h3>
-    <ul class="list-disc ml-6">
-      <li>Master of Science in Business Analytics | GPA: 3.5 | Expected: Dec 2025</li>
-    </ul>
-  </div>
-
-  <div class="mb-6">
-    <h3 class="text-xl font-bold text-blue-600">St. Pious X Degree College, Hyderabad, India</h3>
-    <ul class="list-disc ml-6">
-      <li>Bachelor of Commerce in Computer Applications | GPA: 4.0 | Graduated: May 2023</li>
-    </ul>
-  </div>
-
-  <h2 class="text-2xl font-semibold mt-8">Certifications</h2>
-  <ul class="list-disc ml-6">
-    <li>NSIC Entrepreneurship Orientation Program</li>
-    <li>Ad Mad Competition – Creative Strategy & Advertising</li>
-  </ul>
-</section>
-
+      <h2>Education & Certifications</h2>
+      <ul>
+        <li><strong>M.S. Business Analytics</strong> – UNT, GPA: 3.5 (Expected Dec 2025)</li>
+        <li><strong>B.Com in Computer Applications</strong> – GPA: 4.0 (Graduated May 2023)</li>
+        <li><strong>Certifications:</strong> Entrepreneurship Orientation Program (NSIC), Creative Strategy – Ad Mad</li>
+      </ul>
+    </section>
 
     <section id="skills" class="hidden">
       <h2>Technical & Analytical Skills</h2>
-      <p>Python, R, SQL, Tableau, Power BI, SAP, Oracle NetSuite, Microsoft Dynamics 365</p>
+      <ul>
+        <li>Languages: Python, R, SQL</li>
+        <li>BI Tools: Tableau, Power BI, Excel</li>
+        <li>ML: TensorFlow, PyTorch</li>
+        <li>ERP: SAP FI, Oracle NetSuite, MS Dynamics 365</li>
+        <li>Others: Tally, QuickBooks, Agile, Google Sheets</li>
+      </ul>
     </section>
 
     <section id="experience" class="hidden">
-      <h2>Internship & Employment Experience</h2>
+      <h2>Experience</h2>
       <ul>
-        <li>Student Assistant – Einstein Bros. Bagels</li>
-        <li>Intern – NSIC</li>
-        <li>Counselor – Voice for Girls</li>
+        <li><strong>Student Assistant</strong> – Einstein Bros. Bagels, UNT (Nov 2024 – Present)</li>
+        <li><strong>Entrepreneurship Intern</strong> – NSIC, Hyderabad (Nov 2022 – Mar 2023)</li>
+        <li><strong>Counselor</strong> – Voice for Girls (Aug 2021 – Nov 2022)</li>
       </ul>
     </section>
 
     <section id="projects" class="hidden">
-      <h2>Projects in Business Analytics</h2>
+      <h2>Projects</h2>
       <ul>
-        <li>Sales Forecasting Dashboard (Power BI)</li>
-        <li>Customer Segmentation (Python + K-means)</li>
-        <li>Financial Performance Analysis (Tableau)</li>
+        <li>Sales Forecasting Dashboard – Power BI</li>
+        <li>Customer Segmentation – Python (K-Means)</li>
+        <li>Financial KPI Dashboard – Tableau</li>
       </ul>
     </section>
 
     <section id="leadership" class="hidden">
       <h2>Leadership & Community</h2>
       <ul>
-        <li>UNT Business Analytics Club Member</li>
-        <li>Ad Mad Competition Winner</li>
+        <li>UNT Business Analytics Club – Active Member</li>
+        <li>Ad Mad Competition – Winner</li>
         <li>National-Level Swimmer</li>
       </ul>
     </section>
   </main>
-  
-  <script>
-  function showSection(id) {
-    document.querySelectorAll("main section").forEach((section) => {
-      section.classList.add("hidden");
-      section.classList.remove("show");
-    });
 
-    const selectedSection = document.getElementById(id);
-    selectedSection.classList.remove("hidden");
-
-    // Add animation after short delay
-    setTimeout(() => {
-      selectedSection.classList.add("show");
-    }, 100);
-  }
-
-  // Optional: Load the About section by default
-  window.onload = () => {
-    showSection('about');
-  };
-</script>
-
+  <script src="script.js"></script>
 </body>
 </html>
