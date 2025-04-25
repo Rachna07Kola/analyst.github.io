@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Business Analyst Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Business Analyst Portfolio</h1>
+    <p>Showcasing projects, skills, and professional journey</p>
+  </header>
+
+  <nav>
+    <button onclick="showSection('about')">About Me</button>
+    <button onclick="showSection('career')">Career Summary</button>
+    <button onclick="showSection('education')">Education & Certifications</button>
+    <button onclick="showSection('skills')">Skills</button>
+    <button onclick="showSection('experience')">Experience</button>
+    <button onclick="showSection('projects')">Projects</button>
+    <button onclick="showSection('leadership')">Leadership</button>
+  </nav>
+
+  <main id="content">
+    <section id="about">
+      <h2>About Me</h2>
+      <p>
+        As a Business Analytics graduate student and University of North Texas graduate...
+      </p>
+    </section>
+
+    <section id="career" class="hidden">
+      <h2>Career Summary</h2>
+      <p>
+        As a Master’s in Business Analytics student at the University of North Texas...
+      </p>
+    </section>
+
+    <section id="education" class="hidden">
+      <h2>Education & Certifications</h2>
+      <ul>
+        <li>Master of Science in Business Analytics | GPA: 3.5 | Expected: Dec 2025</li>
+        <li>Bachelor of Commerce in Computer Applications | GPA: 4.0 | Graduated: May 2023</li>
+        <li>Certifications: NSIC Entrepreneurship Program, Ad Mad Creative Strategy</li>
+      </ul>
+    </section>
+
+    <section id="skills" class="hidden">
+      <h2>Technical & Analytical Skills</h2>
+      <p>Python, R, SQL, Tableau, Power BI, SAP, Oracle NetSuite, Microsoft Dynamics 365</p>
+    </section>
+
+    <section id="experience" class="hidden">
+      <h2>Internship & Employment Experience</h2>
+      <ul>
+        <li>Student Assistant – Einstein Bros. Bagels</li>
+        <li>Intern – NSIC</li>
+        <li>Counselor – Voice for Girls</li>
+      </ul>
+    </section>
+
+    <section id="projects" class="hidden">
+      <h2>Projects in Business Analytics</h2>
+      <ul>
+        <li>Sales Forecasting Dashboard (Power BI)</li>
+        <li>Customer Segmentation (Python + K-means)</li>
+        <li>Financial Performance Analysis (Tableau)</li>
+      </ul>
+    </section>
+
+    <section id="leadership" class="hidden">
+      <h2>Leadership & Community</h2>
+      <ul>
+        <li>UNT Business Analytics Club Member</li>
+        <li>Ad Mad Competition Winner</li>
+        <li>National-Level Swimmer</li>
+      </ul>
+    </section>
+  </main>
+
+  <script>
+    function showSection(id) {
+      document.querySelectorAll("main section").forEach((section) =>
+        section.classList.add("hidden")
+      );
+      document.getElementById(id).classList.remove("hidden");
+    }
+  </script>
+</body>
+</html>
