@@ -172,4 +172,9 @@ footer {
   transform: scale(1.05); /* Slight zoom effect */
 }
 
+.resume-btn-container {
+  position: fixed;
+  top: 20px; /* Distance from the top */
+  right: 20px; /* Distance from the right edge */
+}
 
