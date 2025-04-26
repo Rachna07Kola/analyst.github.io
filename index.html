@@ -2,28 +2,28 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Harshitha's Business Analyst Portfolio</title>
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- External Libraries -->
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
-  <style>
-    body { font-family: 'Poppins', sans-serif; margin: 0; background: #f9f9f9; color: #333; }
-    nav { background: #0f172a; display: flex; justify-content: space-between; align-items: center; padding: 1rem 2rem; position: sticky; top: 0; z-index: 999; }
-    .logo { color: #fff; font-size: 1.5rem; font-weight: bold; }
-    .nav-links { list-style: none; display: flex; margin: 0; padding: 0; }
-    .nav-links li { margin: 0 1rem; }
-    .nav-links a { color: white; text-decoration: none; transition: 0.3s; }
-    .nav-links a:hover { color: #38bdf8; }
-    section { padding: 5rem 2rem; max-width: 1000px; margin: auto; }
-    h2 { color: #0f172a; border-bottom: 2px solid #38bdf8; padding-bottom: 0.5rem; }
-    footer { text-align: center; padding: 2rem; background: #0f172a; color: white; }
-    img { max-width: 100%; margin: 1rem 0; }
-  </style>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 </head>
+
 <body>
+
+  <!-- Particles Background -->
+  <div id="particles-js"></div>
 
   <header>
     <nav>
-      <div class="logo">Harshitha's Business Analyst Portfolio</div>
+      <div class="logo">Harshitha</div>
       <ul class="nav-links">
         <li><a href="#about">About</a></li>
         <li><a href="#career">Career</a></li>
@@ -34,93 +34,57 @@
         <li><a href="#leadership">Leadership</a></li>
       </ul>
     </nav>
+
+    <section class="hero">
+      <h1>Hi, I'm Harshitha</h1>
+      <span id="typed-text"></span>
+    </section>
   </header>
 
-  <section id="about" data-aos="fade-up">
-    <h2>About Me</h2>
-    <p>As a Business Analytics graduate student and University of North Texas graduate, I hold Bachelor's degrees in Commerce and Computer Applications. Maintaining a 4.0 GPA during undergraduate studies and 3.5 GPA in graduate studies, I combine practical knowledge in data analytics and enterprise technology systems. Skilled in Python, R, SQL, Tableau, Power BI, SAP, Oracle NetSuite, and Microsoft Dynamics 365. I balance strategic thinking and creativity through leadership, social outreach, and my national-level swimming experience, showcasing a blend of business intelligence, technical expertise, and value-driven approaches.</p>
-  </section>
+  <!-- Sections Start -->
+  <section id="about" data-aos="fade-up">...</section>
+  <section id="career" data-aos="fade-up">...</section>
+  <section id="education" data-aos="fade-up">...</section>
+  <section id="skills" data-aos="fade-up">...</section>
+  <section id="experience" data-aos="fade-up">...</section>
 
-  <section id="career" data-aos="fade-up">
-    <h2>Career Summary</h2>
-    <p>As a Master’s in Business Analytics student at the University of North Texas, I bring detailed-driven analysis and data interpretation skills. I use predictive analytics and business strategy development to extract precise insights, empowering organizational growth and strategic decision-making.</p>
-  </section>
-
-  <section id="education" data-aos="fade-up">
-    <h2>Education & Certifications</h2>
-    <h3>University of North Texas, Denton, TX</h3>
-    <p><em>Master of Science in Business Analytics</em> | GPA: 3.5 | Expected: Dec 2025</p>
-    <p><strong>Key Courses:</strong> Data Visualization, Data Mining, Predictive Analysis, Business Statistics</p>
-    <img src="./_blb.jpg" alt="G. Brint Ryan College of Business">
-
-    <h3>St. Pious X Degree College, Hyderabad, India</h3>
-    <p><em>Bachelor of Commerce in Computer Applications</em> | GPA: 4.0 | Graduated: May 2023</p>
-    <p><strong>Relevant Courses:</strong> Financial Planning and Performance, E-Commerce, IFRS, Business Statistics, Cost Accounting, Business Economics</p>
-    <img src="./st.piousx.jpg" alt="St. Pious College">
-
-    <h4>Certifications:</h4>
-    <ul>
-      <li>Entrepreneurship Orientation Program (NSIC)</li>
-      <li>Ad Mad Competition – Creative Strategy & Advertising</li>
-    </ul>
-  </section>
-
-  <section id="skills" data-aos="fade-up">
-    <h2>Technical & Analytical Skills</h2>
-    <h4>Languages & Programming:</h4>
-    <p>Python, R, SQL</p>
-    <h4>Visualization & BI Tools:</h4>
-    <p>Tableau, Power BI, Excel</p>
-    <h4>Machine Learning & Analysis:</h4>
-    <p>TensorFlow, PyTorch, Predictive Analytics, Data Mining</p>
-    <h4>Accounting & Finance Tools:</h4>
-    <p>Tally ERP9/Prime, QuickBooks, Sage Accounting, TaxCalc</p>
-    <h4>ERP & Financial Systems:</h4>
-    <p>SAP (FI Module), Oracle NetSuite, Microsoft Dynamics 365 Finance</p>
-    <h4>Cloud-Based Platforms & Tools:</h4>
-    <p>Google Sheets, OneDrive, Adaptive Insights</p>
-    <h4>Other:</h4>
-    <p>Agile Project Management, Microsoft Office Suite</p>
-    <img src="./_skills.png" alt="Skills">
-  </section>
-
-  <section id="experience" data-aos="fade-up">
-    <h2>Internship & Employment Experience</h2>
-    <h4>Student Assistant | Einstein Bros. Bagels, UNT, Denton, TX (Nov 2024 – Present)</h4>
-    <p>Managed POS operations and customer order dispatch, reinforcing multitasking and reliability.</p>
-
-    <h4>Entrepreneurship Intern | NSIC, Hyderabad, India (Nov 2022 – Mar 2023)</h4>
-    <p>Participated in industrial awareness and entrepreneurial workshops focused on foundational business skills.</p>
-
-    <h4>Counselor | Voice for Girls, Hyderabad, India (Aug 2021 – Nov 2022)</h4>
-    <p>Provided mentorship and guidance to young students, fostering confidence and communication skills.</p>
-  </section>
-
+  <!-- Projects Section (Grid) -->
   <section id="projects" data-aos="fade-up">
     <h2>Projects in Business Analytics & Reporting</h2>
-    <ul>
-      <li><strong>Sales Forecasting Dashboard (Academic)</strong> – Built an interactive analysis system using Power BI and Excel for retail sales trend assessment.</li>
-      <li><strong>Customer Segmentation Model (Coursework)</strong> – Used K-means clustering and Python tools to generate client segments based on shopping behavior.</li>
-      <li><strong>Financial Performance Analysis (Academic)</strong> – Built KPI evaluation financial dashboards using Tableau with sample corporate data.</li>
-    </ul>
+    <div class="projects-grid">
+
+      <div class="project-card">
+        <h3>Sales Forecasting Dashboard</h3>
+        <p>Built an interactive sales trend analysis system using Power BI and Excel for retail data insights.</p>
+        <p><strong>Tools:</strong> Power BI, Excel</p>
+      </div>
+
+      <div class="project-card">
+        <h3>Customer Segmentation Model</h3>
+        <p>Generated client segments based on shopping behavior using K-means clustering and Python analysis tools.</p>
+        <p><strong>Tools:</strong> Python, K-means</p>
+      </div>
+
+      <div class="project-card">
+        <h3>Financial Performance Analysis</h3>
+        <p>Developed KPI-based financial dashboards for sample corporate data evaluation using Tableau.</p>
+        <p><strong>Tools:</strong> Tableau, Excel</p>
+      </div>
+
+    </div>
   </section>
 
-  <section id="leadership" data-aos="fade-up">
-    <h2>Leadership & Community Involvement</h2>
-    <ul>
-      <li><strong>UNT Business Analytics Club</strong> – Active Member since Jan 2024. Engaged in seminars, analytics challenges, and peer learning events.</li>
-      <li><strong>Ad Mad Competition – Winner (Hyderabad, 2022)</strong> – Led a creative ad campaign addressing a social challenge, emphasizing innovation and marketing insight.</li>
-      <li><strong>National-Level Swimmer</strong> – Represented school and undergraduate college at national swim meets, demonstrating discipline, competitive spirit, and time management.</li>
-    </ul>
-  </section>
+  <section id="leadership" data-aos="fade-up">...</section>
+  <!-- Sections End -->
+
+  <button id="scrollToTopBtn">&#8679;</button>
 
   <footer>
     <p>Made with by Harshitha</p>
   </footer>
 
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init({ duration: 1200 });
-  </script>
+  <!-- Main JavaScript -->
+  <script src="script.js"></script>
+
 </body>
 </html>
