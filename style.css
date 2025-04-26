@@ -178,3 +178,7 @@ footer {
   right: 20px; /* Distance from the right edge */
 }
 
+section {
+  display: block;
+  visibility: visible;
+}
