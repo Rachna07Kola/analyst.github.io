@@ -145,3 +145,31 @@ footer {
   background: #0f172a;
   color: white;
 }
+
+/* Wrapper for the button */
+.resume-btn-container {
+  display: flex;
+  justify-content: flex-end; /* Aligns the button to the right */
+  margin-top: 20px; /* Adds some space from the content above */
+}
+
+/* Button Styling (same as before) */
+.download-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #ff6b6b; /* Button color */
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.download-btn:hover {
+  background-color: #ff4747; /* Darker on hover */
+  transform: scale(1.05); /* Slight zoom effect */
+}
+
+
