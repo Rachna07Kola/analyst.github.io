@@ -124,7 +124,7 @@ h2 {
   bottom: 40px;
   right: 40px;
   background: #38bdf8;
-  color: white;
+  color: blue;
   border: none;
   padding: 1rem;
   border-radius: 50%;
@@ -170,12 +170,6 @@ footer {
 .download-btn:hover {
   background-color: #ff4747; /* Darker on hover */
   transform: scale(1.05); /* Slight zoom effect */
-}
-
-.resume-btn-container {
-  position: fixed;
-  top: 20px; /* Distance from the top */
-  right: 20px; /* Distance from the right edge */
 }
 
 section {
