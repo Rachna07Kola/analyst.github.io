@@ -3,10 +3,109 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Business Analyst Portfolio</title>
+  <title>Harshitha's Business Analyst Portfolio</title>
 
-  <!-- External CSS -->
-  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Global Styles */
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 100px 20px;
+      min-height: 100vh;
+    }
+
+    .hero h1 {
+      font-size: 3em;
+      margin: 0;
+    }
+
+    #typed-text {
+      font-size: 1.5em;
+      color: #f39c12;
+    }
+
+    /* Navigation */
+    nav {
+      background: #222;
+      padding: 15px;
+    }
+
+    .nav-links {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    .nav-links li {
+      margin: 0 1rem;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.2em;
+      transition: 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: #f39c12;
+    }
+
+    /* Sections */
+    section {
+      padding: 60px 20px;
+      background: #f4f4f4;
+      min-height: 100vh;
+    }
+
+    section h2 {
+      text-align: center;
+      font-size: 2em;
+    }
+
+    /* Footer */
+    footer {
+      background: #222;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      position: relative;
+    }
+
+    /* Scroll to Top Button */
+    #scrollToTopBtn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background-color: #f39c12;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      cursor: pointer;
+      font-size: 20px;
+      border-radius: 5px;
+      display: none;
+    }
+
+    #scrollToTopBtn:hover {
+      background-color: #333;
+    }
+
+    /* AOS (Animate On Scroll) */
+    [data-aos] {
+      transition: all 0.3s ease;
+    }
+  </style>
 
   <!-- External Libraries -->
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
@@ -23,7 +122,6 @@
 
   <header>
     <nav>
-      <div class="logo"></div>
       <ul class="nav-links">
         <li><a href="#about">About</a></li>
         <li><a href="#career">Career</a></li>
@@ -36,110 +134,130 @@
     </nav>
 
     <section class="hero">
-      <h1>Hi, I'm </h1>
+      <h1>Hi, I'm Harshitha</h1>
       <span id="typed-text"></span>
     </section>
   </header>
 
   <!-- Sections Start -->
-  
   <section id="about" data-aos="fade-up">
     <h2>About Me</h2>
-    <p>As a Business Analytics graduate student and University of North Texas graduate I hold Bachelors degrees in Commerce and Computer Applications. My academic records present myself as a student who maintained a 4.0 GPA during my undergraduate studies and now earns a 3.5 GPA because I combine this achievement with practical knowledge in data analytics and enterprise technology and reporting systems. I use Python, R, SQL, Tableau, and Power BI in combination with my capabilities in financial and ERP platforms including SAP, Oracle NetSuite and Microsoft Dynamics 365. My combination of strategic thinking and creative decision-making arises when I mentor students through social outreach activities and leadership roles in entrepreneurship events and successful creative projects. My approach to dealing with challenges includes discipline along with precision and collaborative temperaments since I swim nationally and participate in the UNT Business Analytics Club activities. My portfolio provides an integrated perspective of my development which brings together business intelligence capabilities with technical expertise and strong value-driven approaches.</p>
+    <p>As a Business Analytics graduate student at the University of North Texas, I hold a Master of Science in Business Analytics. I use Python, R, SQL, Tableau, and Power BI for data analysis and visualization. My projects blend technical expertise with business insights to develop valuable solutions.</p>
   </section>
-
+  
   <section id="career" data-aos="fade-up">
     <h2>Career Summary</h2>
-    <p>As a Master’s in Business Analytics student at the University of North Texas I work with precision and analysis to bring my commerce and computer applications education to detail-driven analyses. Within my field I use my expertise to perform data interpretation and predictive analytics together with developing business strategies. I bring my enthusiasm toward data interpretation to develop precise insights which enable sound organizational choices and promote organizational development.</p>
+    <p>My goal is to leverage data interpretation and predictive analytics to drive business strategies and decision-making. I aim to contribute to organizational development through data-driven insights.</p>
   </section>
-
+  
   <section id="education" data-aos="fade-up">
     <h2>Education & Certifications</h2>
-    <p><strong>Master of Science in Business Analytics</strong> | GPA: 3.5 | <em>Expected: Dec 2025</em></p>
-    <p><strong>Key Courses:</strong> Data Visualization, Data Mining, Predictive Analysis, Business Statistics</p>
-    <img src="./_blb.jpg" alt="G. Brint Ryan College of Business">
-
-    <p><strong>Bachelor of Commerce in Computer Applications</strong> | GPA: 4.0 | <em>Graduated: May 2023</em></p>
-    <p><strong>Relevant Courses:</strong> Financial Planning and Performance, E-Commerce, IFRS, Business Statistics, Cost Accounting, Business Economics</p>
-    <img src="./st.piousx.jpg" alt="St. Pious College">
-
-    <h3>Certifications:</h3>
-    <ul>
-      <li>Entrepreneurship Orientation Program (NSIC)</li>
-      <li>Ad Mad Competition – Creative Strategy & Advertising</li>
-    </ul>
+    <p>Master of Science in Business Analytics (University of North Texas) and Bachelor of Commerce in Computer Applications (GPA: 4.0). My certifications include Entrepreneurship Orientation Program (NSIC) and Ad Mad Competition Winner.</p>
   </section>
-
+  
   <section id="skills" data-aos="fade-up">
     <h2>Technical & Analytical Skills</h2>
-    <ul>
-      <li><strong>Languages & Programming:</strong> Python, R, SQL</li>
-      <li><strong>Visualization & BI Tools:</strong> Tableau, Power BI, Excel</li>
-      <li><strong>Machine Learning & Analysis:</strong> TensorFlow, PyTorch, Predictive Analytics, Data Mining</li>
-      <li><strong>Accounting & Finance Tools:</strong> Tally ERP9/Prime, QuickBooks, Sage Accounting, TaxCalc</li>
-      <li><strong>ERP & Financial Systems:</strong> SAP (FI Module), Oracle NetSuite, Microsoft Dynamics 365 Finance</li>
-      <li><strong>Cloud-Based Platforms & Tools:</strong> Google Sheets, OneDrive, Adaptive Insights</li>
-      <li><strong>Other:</strong> Agile Project Management, Microsoft Office Suite</li>
-    </ul>
+    <p>Skills include Python, R, SQL, Tableau, Power BI, TensorFlow, PyTorch, machine learning, predictive analytics, and ERP platforms such as SAP and Oracle NetSuite.</p>
   </section>
-
+  
   <section id="experience" data-aos="fade-up">
     <h2>Internship & Employment Experience</h2>
-    <p><strong>Student Assistant</strong> <em>Einstein Bros. Bagels, UNT, Denton, TX</em> <span>November 2024 – Present</span></p>
-    <ul>
-      <li>Managed POS operations and customer order dispatch, reinforcing multitasking and reliability.</li>
-    </ul>
-
-    <p><strong>Entrepreneurship Intern</strong> <em>NSIC, Hyderabad, India</em> <span>November 2022 – March 2023</span></p>
-    <ul>
-      <li>Participated in industrial awareness and entrepreneurial workshops focused on foundational business skills.</li>
-    </ul>
-
-    <p><strong>Counselor</strong> <em>Voice for Girls, Hyderabad, India</em> <span>August 2021 - November 2022</span></p>
-    <ul>
-      <li>Provided mentorship and guidance to young students, fostering confidence and communication skills.</li>
-    </ul>
+    <p>Student Assistant at Einstein Bros. Bagels (UNT) and Entrepreneurship Intern at NSIC. Experience in POS operations, multitasking, and customer service.</p>
   </section>
 
   <section id="projects" data-aos="fade-up">
     <h2>Projects in Business Analytics & Reporting</h2>
     <div class="projects-grid">
       <div class="project-card">
-        <h3>Sales Forecasting Dashboard (Academic)</h3>
+        <h3>Sales Forecasting Dashboard</h3>
         <p>Built an interactive analysis system through Power BI and Excel for retail sales trend assessment.</p>
       </div>
-
       <div class="project-card">
-        <h3>Customer Segmentation Model (Coursework)</h3>
-        <p>Using K-means clustering method and Python tools I generated client segments based on their shopping behavior.</p>
+        <h3>Customer Segmentation Model</h3>
+        <p>Used K-means clustering with Python to generate client segments based on shopping behavior.</p>
       </div>
-
       <div class="project-card">
-        <h3>Financial Performance Analysis (Academic)</h3>
-        <p>I built KPI evaluation financial dashboards by using Tableau with sample corporate data.</p>
+        <h3>Financial Performance Analysis</h3>
+        <p>Created KPI evaluation financial dashboards using Tableau with sample corporate data.</p>
       </div>
     </div>
   </section>
 
   <section id="leadership" data-aos="fade-up">
     <h2>Leadership & Community Involvement</h2>
-    <ul>
-      <li><strong>UNT Business Analytics Club</strong> <em>Active Member since Jan 2024</em> – Engaged in seminars, analytics challenges, and peer learning events.</li>
-      <li><strong>Ad Mad Competition – Winner (Hyderabad, 2022)</strong> – Led a creative ad campaign addressing a social challenge, emphasizing innovation, marketing insight, and teamwork.</li>
-      <li><strong>National-Level Swimmer</strong> – Represented school and undergraduate college at national swim meets, demonstrating discipline, competitive spirit, and time management.</li>
-    </ul>
+    <p>Active member of the UNT Business Analytics Club, National-Level Swimmer, and winner of the Ad Mad Competition.</p>
   </section>
-
   <!-- Sections End -->
 
   <button id="scrollToTopBtn">&#8679;</button>
 
   <footer>
-    <p>Made with by Harshitha</p>
+    <p>Made with ❤️ by Harshitha</p>
   </footer>
 
-  <!-- Main JavaScript -->
-  <script src="script.js"></script>
+  <script>
+    // Scroll to Top Button Visibility
+    window.onscroll = function() {
+      const btn = document.getElementById("scrollToTopBtn");
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        btn.style.display = "block";
+      } else {
+        btn.style.display = "none";
+      }
+    };
+
+    // Scroll to Top Function
+    document.getElementById("scrollToTopBtn").onclick = function() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    };
+
+    // Typed.js for Typing Effect
+    const options = {
+      strings: ["Business Analyst", "Data Scientist", "Tech Enthusiast", "Creative Leader"],
+      typeSpeed: 100,
+      backSpeed: 50,
+      backDelay: 1000,
+      loop: true
+    };
+    const typed = new Typed("#typed-text", options);
+  </script>
+
+  <script>
+    // Initialize Particles.js for background
+    particlesJS("particles-js", {
+      particles: {
+        number: { value: 80, density: { enable: true, value_area: 800 } },
+        color: { value: "#f39c12" },
+        shape: {
+          type: "circle",
+          stroke: { width: 0, color: "#000000" },
+          polygon: { nb_sides: 5 }
+        },
+        opacity: { value: 0.5, random: false, anim: { enable: false } },
+        size: { value: 3, random: true, anim: { enable: false } },
+        line_linked: { enable: true, distance: 150, color: "#f39c12", opacity: 0.4, width: 1 },
+        move: {
+          enable: true,
+          speed: 2,
+          direction: "none",
+          random: false,
+          straight: false,
+          out_mode: "out",
+          bounce: false,
+          attract: { enable: false }
+        }
+      },
+      interactivity: {
+        detect_on: "canvas",
+        events: {
+          onhover: { enable: true, mode: "repulse" },
+          onclick: { enable: true, mode: "push" }
+        }
+      },
+      retina_detect: true
+    });
+  </script>
 
 </body>
 </html>
