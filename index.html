@@ -1,125 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Harshitha's Portfolio</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Harshitha's Business Analyst Portfolio</title>
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
   <style>
-    html {
-      scroll-behavior: smooth;
-    }
-
-    .active-link {
-      @apply text-white bg-blue-700 font-semibold;
-    }
-
-    .nav-link {
-      @apply text-blue-700 px-3 py-2 rounded-md transition-all duration-300;
-    }
-
-    section {
-      scroll-margin-top: 100px;
-    }
+    body { font-family: 'Poppins', sans-serif; margin: 0; background: #f9f9f9; color: #333; }
+    nav { background: #0f172a; display: flex; justify-content: space-between; align-items: center; padding: 1rem 2rem; position: sticky; top: 0; z-index: 999; }
+    .logo { color: #fff; font-size: 1.5rem; font-weight: bold; }
+    .nav-links { list-style: none; display: flex; margin: 0; padding: 0; }
+    .nav-links li { margin: 0 1rem; }
+    .nav-links a { color: white; text-decoration: none; transition: 0.3s; }
+    .nav-links a:hover { color: #38bdf8; }
+    section { padding: 5rem 2rem; max-width: 1000px; margin: auto; }
+    h2 { color: #0f172a; border-bottom: 2px solid #38bdf8; padding-bottom: 0.5rem; }
+    footer { text-align: center; padding: 2rem; background: #0f172a; color: white; }
+    img { max-width: 100%; margin: 1rem 0; }
   </style>
 </head>
-<body class="bg-gradient-to-r from-indigo-100 via-purple-100 to-pink-100 text-gray-800">
-  <!-- 🌟 Sticky Navbar -->
-  <nav class="sticky top-0 z-50 bg-white shadow-md py-3 px-4 flex justify-center space-x-4">
-    <a href="#about" class="nav-link" id="link-about">About</a>
-    <a href="#education" class="nav-link" id="link-education">Education</a>
-    <a href="#projects" class="nav-link" id="link-projects">Projects</a>
-  </nav>
+<body>
 
-  <!-- 🌼 Sections -->
-  <main class="max-w-5xl mx-auto mt-10 space-y-20">
-    <!-- About -->
-    <section id="about" class="p-6 bg-white bg-opacity-90 rounded-xl shadow-md">
-      <h2 class="text-3xl font-bold text-blue-800 mb-4">About Me</h2>
-      <p>Hi! I'm Harshitha, a Business Analytics enthusiast passionate about insights, innovation, and impact...</p>
-    </section>
-
-    <!-- Education -->
-    <section id="education" class="p-6 bg-white bg-opacity-90 rounded-xl shadow-md">
-      <h2 class="text-3xl font-bold text-purple-800 mb-6">Education & Certifications</h2>
-      <div class="grid md:grid-cols-2 gap-6">
-        <div class="bg-white rounded-xl p-4 border border-gray-200 shadow-md hover:scale-105 transition-transform">
-          <img src="https://upload.wikimedia.org/wikipedia/en/6/6c/University_of_North_Texas_seal.svg" alt="UNT Logo" class="h-12 mb-2">
-          <h3 class="font-bold text-blue-600">University of North Texas, Denton, TX</h3>
-          <p>Master of Science in Business Analytics</p>
-          <p class="text-sm text-gray-500">GPA: 3.5 | Expected: Dec 2025</p>
-        </div>
-        <div class="bg-white rounded-xl p-4 border border-gray-200 shadow-md hover:scale-105 transition-transform">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/University_icon.svg/1024px-University_icon.svg.png" alt="Pious Logo" class="h-12 mb-2">
-          <h3 class="font-bold text-blue-600">St. Pious X Degree College, Hyderabad, India</h3>
-          <p>Bachelor of Commerce in Computer Applications</p>
-          <p class="text-sm text-gray-500">GPA: 4.0 | Graduated: May 2023</p>
-        </div>
-      </div>
-      <h3 class="text-2xl font-semibold text-purple-600 mt-8 mb-2">Certifications</h3>
-      <ul class="list-disc ml-6">
-        <li>NSIC Entrepreneurship Orientation Program</li>
-        <li>Ad Mad Competition – Creative Strategy & Advertising</li>
+  <header>
+    <nav>
+      <div class="logo">Harshitha's Business Analyst Portfolio</div>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#career">Career</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#leadership">Leadership</a></li>
       </ul>
-    </section>
+    </nav>
+  </header>
 
-    <!-- Projects -->
-    <section id="projects" class="p-6 bg-white bg-opacity-90 rounded-xl shadow-md">
-      <h2 class="text-3xl font-bold text-green-700 mb-4">Projects</h2>
-      <ul class="list-disc ml-6 space-y-2">
-        <li>Sales Forecasting Dashboard</li>
-        <li>Customer Segmentation Model</li>
-        <li>Financial Performance Analysis</li>
-      </ul>
-    </section>
-  </main>
+  <section id="about" data-aos="fade-up">
+    <h2>About Me</h2>
+    <p>As a Business Analytics graduate student and University of North Texas graduate, I hold Bachelor's degrees in Commerce and Computer Applications. Maintaining a 4.0 GPA during undergraduate studies and 3.5 GPA in graduate studies, I combine practical knowledge in data analytics and enterprise technology systems. Skilled in Python, R, SQL, Tableau, Power BI, SAP, Oracle NetSuite, and Microsoft Dynamics 365. I balance strategic thinking and creativity through leadership, social outreach, and my national-level swimming experience, showcasing a blend of business intelligence, technical expertise, and value-driven approaches.</p>
+  </section>
 
-  <!-- Scrollspy Script -->
+  <section id="career" data-aos="fade-up">
+    <h2>Career Summary</h2>
+    <p>As a Master’s in Business Analytics student at the University of North Texas, I bring detailed-driven analysis and data interpretation skills. I use predictive analytics and business strategy development to extract precise insights, empowering organizational growth and strategic decision-making.</p>
+  </section>
+
+  <section id="education" data-aos="fade-up">
+    <h2>Education & Certifications</h2>
+    <h3>University of North Texas, Denton, TX</h3>
+    <p><em>Master of Science in Business Analytics</em> | GPA: 3.5 | Expected: Dec 2025</p>
+    <p><strong>Key Courses:</strong> Data Visualization, Data Mining, Predictive Analysis, Business Statistics</p>
+    <img src="./_blb.jpg" alt="G. Brint Ryan College of Business">
+
+    <h3>St. Pious X Degree College, Hyderabad, India</h3>
+    <p><em>Bachelor of Commerce in Computer Applications</em> | GPA: 4.0 | Graduated: May 2023</p>
+    <p><strong>Relevant Courses:</strong> Financial Planning and Performance, E-Commerce, IFRS, Business Statistics, Cost Accounting, Business Economics</p>
+    <img src="./st.piousx.jpg" alt="St. Pious College">
+
+    <h4>Certifications:</h4>
+    <ul>
+      <li>Entrepreneurship Orientation Program (NSIC)</li>
+      <li>Ad Mad Competition – Creative Strategy & Advertising</li>
+    </ul>
+  </section>
+
+  <section id="skills" data-aos="fade-up">
+    <h2>Technical & Analytical Skills</h2>
+    <h4>Languages & Programming:</h4>
+    <p>Python, R, SQL</p>
+    <h4>Visualization & BI Tools:</h4>
+    <p>Tableau, Power BI, Excel</p>
+    <h4>Machine Learning & Analysis:</h4>
+    <p>TensorFlow, PyTorch, Predictive Analytics, Data Mining</p>
+    <h4>Accounting & Finance Tools:</h4>
+    <p>Tally ERP9/Prime, QuickBooks, Sage Accounting, TaxCalc</p>
+    <h4>ERP & Financial Systems:</h4>
+    <p>SAP (FI Module), Oracle NetSuite, Microsoft Dynamics 365 Finance</p>
+    <h4>Cloud-Based Platforms & Tools:</h4>
+    <p>Google Sheets, OneDrive, Adaptive Insights</p>
+    <h4>Other:</h4>
+    <p>Agile Project Management, Microsoft Office Suite</p>
+    <img src="./_skills.png" alt="Skills">
+  </section>
+
+  <section id="experience" data-aos="fade-up">
+    <h2>Internship & Employment Experience</h2>
+    <h4>Student Assistant | Einstein Bros. Bagels, UNT, Denton, TX (Nov 2024 – Present)</h4>
+    <p>Managed POS operations and customer order dispatch, reinforcing multitasking and reliability.</p>
+
+    <h4>Entrepreneurship Intern | NSIC, Hyderabad, India (Nov 2022 – Mar 2023)</h4>
+    <p>Participated in industrial awareness and entrepreneurial workshops focused on foundational business skills.</p>
+
+    <h4>Counselor | Voice for Girls, Hyderabad, India (Aug 2021 – Nov 2022)</h4>
+    <p>Provided mentorship and guidance to young students, fostering confidence and communication skills.</p>
+  </section>
+
+  <section id="projects" data-aos="fade-up">
+    <h2>Projects in Business Analytics & Reporting</h2>
+    <ul>
+      <li><strong>Sales Forecasting Dashboard (Academic)</strong> – Built an interactive analysis system using Power BI and Excel for retail sales trend assessment.</li>
+      <li><strong>Customer Segmentation Model (Coursework)</strong> – Used K-means clustering and Python tools to generate client segments based on shopping behavior.</li>
+      <li><strong>Financial Performance Analysis (Academic)</strong> – Built KPI evaluation financial dashboards using Tableau with sample corporate data.</li>
+    </ul>
+  </section>
+
+  <section id="leadership" data-aos="fade-up">
+    <h2>Leadership & Community Involvement</h2>
+    <ul>
+      <li><strong>UNT Business Analytics Club</strong> – Active Member since Jan 2024. Engaged in seminars, analytics challenges, and peer learning events.</li>
+      <li><strong>Ad Mad Competition – Winner (Hyderabad, 2022)</strong> – Led a creative ad campaign addressing a social challenge, emphasizing innovation and marketing insight.</li>
+      <li><strong>National-Level Swimmer</strong> – Represented school and undergraduate college at national swim meets, demonstrating discipline, competitive spirit, and time management.</li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>Made with by Harshitha</p>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
-    const sections = document.querySelectorAll("section");
-    const navLinks = document.querySelectorAll("nav a");
-
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        const id = entry.target.getAttribute("id");
-        const link = document.getElementById(`link-${id}`);
-        if (entry.isIntersecting) {
-          navLinks.forEach(link => link.classList.remove("active-link"));
-          link.classList.add("active-link");
-        }
-      });
-    }, {
-      threshold: 0.5
-    });
-
-    sections.forEach(section => observer.observe(section));
+    AOS.init({ duration: 1200 });
   </script>
-  
-  <!-- Footer -->
-<footer class="bg-white bg-opacity-80 mt-20 py-6 shadow-inner">
-  <div class="flex justify-center space-x-6">
-    <!-- Email Icon -->
-    <a href="mailto:harshitha@example.com" class="text-blue-700 hover:text-blue-900" aria-label="Email">
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
-           viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M16 12H8m0 0l4-4m0 8l-4-4m12-6H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2z" />
-      </svg>
-    </a>
-
-    <!-- LinkedIn Icon -->
-    <a href="https://linkedin.com/in/harshitha sreiya palaparthi" target="_blank" class="text-blue-700 hover:text-blue-900" aria-label="LinkedIn">
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor"
-           viewBox="0 0 24 24">
-        <path d="M19 0h-14C2.2 0 0 2.2 0 5v14c0 2.8 2.2 5 5 5h14c2.8 
-                 0 5-2.2 5-5V5c0-2.8-2.2-5-5-5zM7 19H4v-10h3v10zm-1.5-11.3
-                 c-1 0-1.7-.8-1.7-1.7S4.5 4.3 5.5 4.3s1.7.8 1.7 1.7-.8 1.7-1.7 1.7zM20 
-                 19h-3v-5.6c0-1.3-.5-2.2-1.7-2.2-1 0-1.5.7-1.7 
-                 1.3-.1.2-.1.5-.1.8V19h-3v-10h3v1.4c.4-.7 
-                 1.2-1.4 2.6-1.4 2 0 3.5 1.3 3.5 4.1V19z"/>
-      </svg>
-    </a>
-  </div>
-</footer>
 </body>
 </html>
