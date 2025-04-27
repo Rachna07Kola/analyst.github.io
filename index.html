@@ -49,7 +49,7 @@
 
     /* Hero Section */
     .hero {
-      background: #333;
+      background: linear-gradient(rgba(51, 51, 51, 0.8), rgba(51, 51, 51, 0.8)); /* Gradient background instead of solid */
       color: white;
       text-align: center;
       padding: 60px 20px;
@@ -58,16 +58,25 @@
       flex-direction: column;
       justify-content: center;
       margin-top: 40px; /* Add space for fixed navigation */
+      position: relative; /* For positioning */
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2; /* Ensure text is above particles */
     }
 
     .hero h1 {
       font-size: 3em;
       margin: 0;
+      display: inline-block;
+      text-shadow: none; /* Remove any text shadow */
     }
 
     #typed-text {
       font-size: 1.5em;
       color: #f39c12;
+      text-shadow: none; /* Remove any text shadow */
     }
 
     /* Sections */
@@ -193,8 +202,10 @@
     </nav>
 
     <section class="hero" id="home">
-      <h1>Hi, I'm </h1>
-      <span id="typed-text"></span>
+      <div class="hero-content">
+        <h1>Hi, I'm </h1>
+        <span id="typed-text"></span>
+      </div>
     </section>
   </header>
 
@@ -265,19 +276,19 @@
         });
       }
       
-      // Initialize particles.js
+      // Initialize particles.js with lighter colors and less density
       particlesJS("particles-js", {
         particles: {
-          number: { value: 80, density: { enable: true, value_area: 800 } },
+          number: { value: 60, density: { enable: true, value_area: 1000 } }, // Reduced particle count
           color: { value: "#f39c12" },
           shape: {
             type: "circle",
             stroke: { width: 0, color: "#000" },
           },
-          opacity: { value: 0.5, random: true, anim: { enable: true, speed: 1, opacity_min: 0.1, sync: false } },
+          opacity: { value: 0.4, random: true, anim: { enable: true, speed: 1, opacity_min: 0.1, sync: false } }, // Reduced opacity
           size: { value: 3, random: true, anim: { enable: true, speed: 40, size_min: 0.1, sync: false } },
-          line_linked: { enable: true, distance: 150, color: "#f39c12", opacity: 0.4, width: 1 },
-          move: { enable: true, speed: 6, direction: "none", random: false, straight: false, out_mode: "out", bounce: false },
+          line_linked: { enable: true, distance: 150, color: "#f39c12", opacity: 0.3, width: 1 }, // Reduced line opacity
+          move: { enable: true, speed: 4, direction: "none", random: false, straight: false, out_mode: "out", bounce: false }, // Slower movement
         },
         interactivity: {
           detect_on: "canvas",
