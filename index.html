@@ -14,13 +14,50 @@
       scroll-behavior: smooth; /* Enable smooth scrolling */
     }
 
+    /* Navigation */
+    nav {
+      background: #222;
+      padding: 10px;
+      position: fixed; /* Make navigation fixed */
+      width: 100%;
+      top: 0;
+      z-index: 1000; /* Ensure nav is above other content */
+    }
+
+    .nav-links {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    .nav-links li {
+      margin: 0 0.8rem;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.1em;
+      transition: 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: #f39c12;
+    }
+
     /* Hero Section */
     .hero {
       background: #333;
       color: white;
       text-align: center;
-      padding: 60px 20px; /* Reduced padding */
-      min-height: 80vh; /* Reduced height */
+      padding: 60px 20px;
+      min-height: 80vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-top: 40px; /* Add space for fixed navigation */
     }
 
     .hero h1 {
@@ -33,74 +70,45 @@
       color: #f39c12;
     }
 
-    /* Navigation */
-    nav {
-      background: #222;
-      padding: 10px; /* Reduced padding */
-    }
-
-    .nav-links {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-    }
-
-    .nav-links li {
-      margin: 0 0.8rem; /* Reduced margin */
-    }
-
-    .nav-links a {
-      color: white;
-      text-decoration: none;
-      font-size: 1.1em; /* Slightly smaller font */
-      transition: 0.3s;
-    }
-
-    .nav-links a:hover {
-      color: #f39c12;
-    }
-
     /* Sections */
     section {
-      padding: 30px 20px; /* Reduced padding */
+      padding: 30px 20px;
       background: #f4f4f4;
-      min-height: auto; /* Remove fixed height */
       box-sizing: border-box;
       margin: 0;
-      border-bottom: 1px solid #ddd; /* Add separator */
+      border-bottom: 1px solid #ddd;
+      scroll-margin-top: 50px; /* Important: Adds scroll margin for fixed navbar */
     }
 
     section h2 {
       text-align: center;
-      font-size: 1.8em; /* Slightly smaller heading */
-      margin-top: 0; /* Remove top margin */
-      margin-bottom: 15px; /* Reduced bottom margin */
+      font-size: 1.8em;
+      margin-top: 0;
+      margin-bottom: 15px;
     }
     
     section p {
-      margin-top: 0; /* Remove top margin */
+      margin-top: 0;
     }
 
     .projects-grid {
       display: flex;
       justify-content: space-around;
       flex-wrap: wrap;
-      gap: 10px; /* Add gap instead of margin */
+      gap: 10px;
     }
 
     .project-card {
       background: #fff;
       border: 1px solid #ddd;
-      padding: 15px; /* Reduced padding */
+      padding: 15px;
       width: 250px;
       box-sizing: border-box;
       text-align: center;
     }
     
     .project-card h3 {
-      margin-top: 0; /* Remove top margin */
+      margin-top: 0;
     }
 
     /* Footer */
@@ -108,27 +116,28 @@
       background: #222;
       color: white;
       text-align: center;
-      padding: 15px; /* Reduced padding */
+      padding: 15px;
       position: relative;
     }
     
     footer p {
-      margin: 0; /* Remove margin */
+      margin: 0;
     }
 
     /* Scroll to Top Button */
     #scrollToTopBtn {
       position: fixed;
-      bottom: 20px; /* Reduced distance from bottom */
-      right: 20px; /* Reduced distance from right */
+      bottom: 20px;
+      right: 20px;
       background-color: #f39c12;
       color: white;
       border: none;
-      padding: 8px 12px; /* Reduced padding */
+      padding: 8px 12px;
       cursor: pointer;
-      font-size: 18px; /* Slightly smaller font */
+      font-size: 18px;
       border-radius: 5px;
       display: none;
+      z-index: 100;
     }
 
     #scrollToTopBtn:hover {
@@ -142,18 +151,19 @@
     
     /* Particles container */
     #particles-js {
-      position: absolute;
+      position: fixed; /* Changed to fixed */
       width: 100%;
       height: 100%;
       top: 0;
       left: 0;
-      z-index: 1;
+      z-index: 0; /* Behind content */
+      pointer-events: none; /* Allow clicking through to content */
     }
     
     /* Make sure content is above particles */
     header, section, footer {
       position: relative;
-      z-index: 2;
+      z-index: 1;
     }
   </style>
 
@@ -182,7 +192,7 @@
       </ul>
     </nav>
 
-    <section class="hero">
+    <section class="hero" id="home">
       <h1>Hi, I'm </h1>
       <span id="typed-text"></span>
     </section>
@@ -241,10 +251,56 @@
   <button id="scrollToTopBtn">&#8679;</button>
 
   <footer>
-    <p>Made with by Harshitha</p>
+    <p>Made with ❤️ by Harshitha</p>
   </footer>
 
   <script>
+    // Initialize AOS (Animate on Scroll)
+    document.addEventListener('DOMContentLoaded', function() {
+      // Initialize AOS if it exists
+      if (typeof AOS !== 'undefined') {
+        AOS.init({
+          duration: 800,
+          once: false
+        });
+      }
+      
+      // Initialize particles.js
+      particlesJS("particles-js", {
+        particles: {
+          number: { value: 80, density: { enable: true, value_area: 800 } },
+          color: { value: "#f39c12" },
+          shape: {
+            type: "circle",
+            stroke: { width: 0, color: "#000" },
+          },
+          opacity: { value: 0.5, random: true, anim: { enable: true, speed: 1, opacity_min: 0.1, sync: false } },
+          size: { value: 3, random: true, anim: { enable: true, speed: 40, size_min: 0.1, sync: false } },
+          line_linked: { enable: true, distance: 150, color: "#f39c12", opacity: 0.4, width: 1 },
+          move: { enable: true, speed: 6, direction: "none", random: false, straight: false, out_mode: "out", bounce: false },
+        },
+        interactivity: {
+          detect_on: "canvas",
+          events: { onhover: { enable: true, mode: "repulse" }, onclick: { enable: true, mode: "push" }, resize: true },
+        },
+        retina_detect: true,
+      });
+      
+      // Typed.js for Typing Effect
+      const options = {
+        strings: ["Business Analyst", "Data Scientist", "Tech Enthusiast", "Creative Leader"],
+        typeSpeed: 100,
+        backSpeed: 50,
+        backDelay: 1000,
+        loop: true
+      };
+      
+      // Only initialize if the element exists
+      if (document.getElementById("typed-text")) {
+        const typed = new Typed("#typed-text", options);
+      }
+    });
+
     // Scroll to Top Button Visibility
     window.onscroll = function() {
       const btn = document.getElementById("scrollToTopBtn");
@@ -260,36 +316,21 @@
       document.body.scrollTop = 0;
       document.documentElement.scrollTop = 0;
     };
-
-    // Typed.js for Typing Effect
-    const options = {
-      strings: ["Business Analyst", "Data Scientist", "Tech Enthusiast", "Creative Leader"],
-      typeSpeed: 100,
-      backSpeed: 50,
-      backDelay: 1000,
-      loop: true
-    };
-    const typed = new Typed("#typed-text", options);
     
-    // Initialize Particles.js for background
-    particlesJS("particles-js", {
-      particles: {
-        number: { value: 80, density: { enable: true, value_area: 800 } },
-        color: { value: "#f39c12" },
-        shape: {
-          type: "circle",
-          stroke: { width: 0, color: "#000" },
-        },
-        opacity: { value: 0.5, random: true, anim: { enable: true, speed: 1, opacity_min: 0.1, sync: false } },
-        size: { value: 3, random: true, anim: { enable: true, speed: 40, size_min: 0.1, sync: false } },
-        line_linked: { enable: true, distance: 150, color: "#f39c12", opacity: 0.4, width: 1 },
-        move: { enable: true, speed: 6, direction: "none", random: false, straight: false, out_mode: "out", bounce: false },
-      },
-      interactivity: {
-        detect_on: "canvas",
-        events: { onhover: { enable: true, mode: "repulse" }, onclick: { enable: true, mode: "push" }, resize: true },
-      },
-      retina_detect: true,
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('nav a').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        const targetId = this.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+        
+        if (targetElement) {
+          targetElement.scrollIntoView({
+            behavior: 'smooth'
+          });
+        }
+      });
     });
   </script>
 </body>
