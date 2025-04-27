@@ -3,346 +3,343 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Business Analyst Portfolio</title>
-
+  <title>Harshitha's Portfolio</title>
+  
+  <!-- CSS inside HTML -->
   <style>
-    /* Global Styles */
-    body, html {
+    /* Reset and Base Styles */
+    * {
       margin: 0;
       padding: 0;
-      font-family: Times New Roman, sans-serif;
-      scroll-behavior: smooth; /* Enable smooth scrolling */
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
     }
 
-    /* Navigation */
-    nav {
-      background: #222;
-      padding: 10px;
-      position: fixed; /* Make navigation fixed */
-      width: 100%;
+    body {
+      background: #f7f9fc;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* Navbar */
+    .navbar {
+      background-color: #4e54c8;
+      padding: 1rem 2rem;
+      position: sticky;
       top: 0;
-      z-index: 1000; /* Ensure nav is above other content */
+      z-index: 999;
+    }
+
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: #fff;
     }
 
     .nav-links {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
+      list-style: none;
       display: flex;
-      justify-content: center;
-    }
-
-    .nav-links li {
-      margin: 0 0.8rem;
+      gap: 1.5rem;
     }
 
     .nav-links a {
-      color: white;
-      text-decoration: none;
-      font-size: 1.1em;
-      transition: 0.3s;
+      color: #fff;
+      font-weight: 500;
+      transition: color 0.3s;
     }
 
     .nav-links a:hover {
-      color: #f39c12;
-    }
-
-    /* Hero Section */
-    .hero {
-      /*background: linear-gradient(rgba(51, 51, 51, 0.8), rgba(51, 51, 51, 0.8)); /* Gradient background instead of solid */
-      color: black;
-      text-align: center;
-      padding: 60px 20px;
-      min-height: 80vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      margin-top: 40px; /* Add space for fixed navigation */
-      position: relative; /* For positioning */
-    }
-
-    .hero-content {
-      position: relative;
-      z-index: 2; /* Ensure text is above particles */
-    }
-
-    .hero h1 {
-      font-size: 3em;
-      margin: 0;
-      display: inline-block;
-      text-shadow: none; /* Remove any text shadow */
-    }
-
-    #typed-text {
-      font-size: 1.5em;
-      color: #f39c12;
-      text-shadow: none; /* Remove any text shadow */
+      color: #ffd700;
     }
 
     /* Sections */
-    section {
-      padding: 30px 20px;
-      background: #f4f4f4;
-      box-sizing: border-box;
-      margin: 0;
-      border-bottom: 1px solid #ddd;
-      scroll-margin-top: 50px; /* Important: Adds scroll margin for fixed navbar */
+    .section-container {
+      padding: 80px 20px;
+      max-width: 1200px;
+      margin: auto;
     }
 
-    section h2 {
+    .section-title {
       text-align: center;
-      font-size: 1.8em;
-      margin-top: 0;
-      margin-bottom: 15px;
-    }
-    
-    section p {
-      margin-top: 0;
+      margin-bottom: 40px;
     }
 
+    .section-title h2 {
+      font-size: 2.5rem;
+      color: #4e54c8;
+    }
+
+    /* About Section */
+    .about-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 40px;
+      text-align: center;
+    }
+
+    .about-text {
+      flex: 1;
+    }
+
+    .about-text p {
+      font-size: 1.1rem;
+      color: #555;
+    }
+
+    .about-image img {
+      border-radius: 20px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      max-width: 100%;
+    }
+
+    /* Skills Section */
+    .skills-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+    }
+
+    .skill-category {
+      background: #e0e7ff;
+      padding: 20px;
+      border-radius: 15px;
+      width: 300px;
+      text-align: center;
+    }
+
+    .skill-category h3 {
+      margin-bottom: 15px;
+      color: #4e54c8;
+    }
+
+    .skill-list {
+      list-style: none;
+    }
+
+    .skill-list li {
+      margin: 8px 0;
+    }
+
+    /* Projects Section */
     .projects-grid {
       display: flex;
-      justify-content: space-around;
       flex-wrap: wrap;
-      gap: 10px;
+      gap: 40px;
+      justify-content: center;
     }
 
     .project-card {
       background: #fff;
-      border: 1px solid #ddd;
-      padding: 15px;
-      width: 250px;
-      box-sizing: border-box;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      width: 300px;
       text-align: center;
+      transition: transform 0.3s;
     }
-    
-    .project-card h3 {
-      margin-top: 0;
+
+    .project-card:hover {
+      transform: translateY(-8px);
+    }
+
+    .project-image img {
+      width: 100%;
+      height: auto;
+    }
+
+    .project-content {
+      padding: 20px;
+    }
+
+    .project-content h3 {
+      color: #4e54c8;
+      margin-bottom: 10px;
+    }
+
+    /* Contact Section */
+    .contact-form {
+      display: flex;
+      justify-content: center;
+    }
+
+    .contact-form form {
+      background: #fff;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 500px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+    }
+
+    .contact-form .primary-btn {
+      background-color: #4e54c8;
+      color: #fff;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background 0.3s;
+    }
+
+    .contact-form .primary-btn:hover {
+      background-color: #3333cc;
     }
 
     /* Footer */
-    footer {
-      background: #244;
-      color: white;
+    .footer {
+      background-color: #4e54c8;
+      color: #fff;
       text-align: center;
-      padding: 15px;
-      position: relative;
-    }
-    
-    footer p {
-      margin: 0;
+      padding: 15px 0;
+      margin-top: 50px;
     }
 
-    /* Scroll to Top Button */
-    #scrollToTopBtn {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background-color: #f39c19;
-      color: white;
-      border: none;
-      padding: 8px 12px;
-      cursor: pointer;
-      font-size: 18px;
-      border-radius: 5px;
-      display: none;
-      z-index: 100;
-    }
-
-    #scrollToTopBtn:hover {
-      background-color: #334;
-    }
-
-    /* AOS (Animate On Scroll) */
-    [data-aos] {
-      transition: all 0.3s ease;
-    }
-    
-    /* Particles container */
-    #particles-js {
-      position: fixed; /* Changed to fixed */
-      width: 100%;
-      height: 100%;
-      top: 0;
-      left: 0;
-      z-index: 0; /* Behind content */
-      pointer-events: none; /* Allow clicking through to content */
-    }
-    
-    /* Make sure content is above particles */
-    header, section, footer {
-      position: relative;
-      z-index: 1;
+    /* Responsive */
+    @media (max-width: 768px) {
+      .about-content, .skills-container, .projects-grid {
+        flex-direction: column;
+        align-items: center;
+      }
     }
   </style>
 
-  <!-- External Libraries -->
-  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
-  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 </head>
-
 <body>
-  <!-- Particles Background -->
-  <div id="particles-js"></div>
 
-  <header>
-    <nav>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo">Harshitha</div>
       <ul class="nav-links">
         <li><a href="#about">About</a></li>
-        <li><a href="#career">Career</a></li>
-        <li><a href="#education">Education</a></li>
         <li><a href="#skills">Skills</a></li>
-        <li><a href="#experience">Experience</a></li>
         <li><a href="#projects">Projects</a></li>
-        <li><a href="#leadership">Leadership</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
-    </nav>
+    </div>
+  </nav>
 
-    <section class="hero" id="home">
-      <div class="hero-content">
-        <h1>Hi, I'm </h1>
-        <span id="typed-text"></span>
+  <!-- About Section -->
+  <section id="about" class="section-container">
+    <div class="section-title">
+      <h2>About Me</h2>
+    </div>
+    <div class="about-content">
+      <div class="about-text">
+        <p>Hello! I'm Harshitha, a passionate developer excited about building impactful solutions and creative designs!</p>
       </div>
-    </section>
-  </header>
-
-  <!-- Sections Start -->
-  <section id="about" data-aos="fade-up">
-    <h2>About Me</h2>
-    <p>As a Business Analytics graduate student at the University of North Texas, I hold a Master of Science in Business Analytics. I use Python, R, SQL, Tableau, and Power BI for data analysis and visualization. My projects blend technical expertise with business insights to develop valuable solutions.</p>
-  </section>
-  
-  <section id="career" data-aos="fade-up">
-    <h2>Career Summary</h2>
-    <p>My goal is to leverage data interpretation and predictive analytics to drive business strategies and decision-making. I aim to contribute to organizational development through data-driven insights.</p>
-  </section>
-  
-  <section id="education" data-aos="fade-up">
-    <h2>Education & Certifications</h2>
-    <p>Master of Science in Business Analytics (University of North Texas) and Bachelor of Commerce in Computer Applications (GPA: 4.0). My certifications include Entrepreneurship Orientation Program (NSIC) and Ad Mad Competition Winner.</p>
-  </section>
-  
-  <section id="skills" data-aos="fade-up">
-    <h2>Technical & Analytical Skills</h2>
-    <p>Skills include Python, R, SQL, Tableau, Power BI, TensorFlow, PyTorch, machine learning, predictive analytics, and ERP platforms such as SAP and Oracle NetSuite.</p>
-  </section>
-  
-  <section id="experience" data-aos="fade-up">
-    <h2>Internship & Employment Experience</h2>
-    <p>Student Assistant at Einstein Bros. Bagels (UNT) and Entrepreneurship Intern at NSIC. Experience in POS operations, multitasking, and customer service.</p>
-  </section>
-
-  <section id="projects" data-aos="fade-up">
-    <h2>Projects in Business Analytics & Reporting</h2>
-    <div class="projects-grid">
-      <div class="project-card">
-        <h3>Sales Forecasting Dashboard</h3>
-        <p>Built an interactive analysis system through Power BI and Excel for retail sales trend assessment.</p>
-      </div>
-      <div class="project-card">
-        <h3>Customer Segmentation Model</h3>
-        <p>Used K-means clustering with Python to generate client segments based on shopping behavior.</p>
-      </div>
-      <div class="project-card">
-        <h3>Financial Performance Analysis</h3>
-        <p>Created KPI evaluation financial dashboards using Tableau with sample corporate data.</p>
+      <div class="about-image">
+        <img src="your-image.jpg" alt="About Harshitha">
       </div>
     </div>
   </section>
 
-  <section id="leadership" data-aos="fade-up">
-    <h2>Leadership & Community Involvement</h2>
-    <p>Active member of the UNT Business Analytics Club, National-Level Swimmer, and winner of the Ad Mad Competition.</p>
+  <!-- Skills Section -->
+  <section id="skills" class="section-container">
+    <div class="section-title">
+      <h2>Skills</h2>
+    </div>
+    <div class="skills-container">
+      <div class="skill-category">
+        <h3>Frontend</h3>
+        <ul class="skill-list">
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+          <li>React</li>
+        </ul>
+      </div>
+      <div class="skill-category">
+        <h3>Backend</h3>
+        <ul class="skill-list">
+          <li>Node.js</li>
+          <li>Python</li>
+          <li>SQL</li>
+          <li>MongoDB</li>
+        </ul>
+      </div>
+      <div class="skill-category">
+        <h3>Tools</h3>
+        <ul class="skill-list">
+          <li>GitHub</li>
+          <li>Docker</li>
+          <li>Postman</li>
+          <li>Figma</li>
+        </ul>
+      </div>
+    </div>
   </section>
-  <!-- Sections End -->
 
-  <button id="scrollToTopBtn">&#8679;</button>
+  <!-- Projects Section -->
+  <section id="projects" class="section-container">
+    <div class="section-title">
+      <h2>Projects</h2>
+    </div>
+    <div class="projects-grid">
+      <div class="project-card">
+        <div class="project-image">
+          <img src="project1.jpg" alt="Project 1">
+        </div>
+        <div class="project-content">
+          <h3>Portfolio Website</h3>
+          <p>A responsive personal portfolio website to showcase my skills and projects.</p>
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="project-image">
+          <img src="project2.jpg" alt="Project 2">
+        </div>
+        <div class="project-content">
+          <h3>Weather App</h3>
+          <p>A real-time weather app using React.js and OpenWeatherMap API.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <footer>
-    <p>Made with by Harshitha</p>
+  <!-- Contact Section -->
+  <section id="contact" class="section-container">
+    <div class="section-title">
+      <h2>Contact</h2>
+    </div>
+    <div class="contact-form">
+      <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit" class="primary-btn">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>© 2025 Harshitha. All rights reserved.</p>
   </footer>
 
-  <script>
-    // Initialize AOS (Animate on Scroll)
-    document.addEventListener('DOMContentLoaded', function() {
-      // Initialize AOS if it exists
-      if (typeof AOS !== 'undefined') {
-        AOS.init({
-          duration: 800,
-          once: false
-        });
-      }
-      
-      // Initialize particles.js with lighter colors and less density
-      particlesJS("particles-js", {
-        particles: {
-          number: { value: 60, density: { enable: true, value_area: 1000 } }, // Reduced particle count
-          color: { value: "#f39c12" },
-          shape: {
-            type: "circle",
-            stroke: { width: 0, color: "#000" },
-          },
-          opacity: { value: 0.4, random: true, anim: { enable: true, speed: 1, opacity_min: 0.1, sync: false } }, // Reduced opacity
-          size: { value: 3, random: true, anim: { enable: true, speed: 40, size_min: 0.1, sync: false } },
-          line_linked: { enable: true, distance: 150, color: "#f39c12", opacity: 0.3, width: 1 }, // Reduced line opacity
-          move: { enable: true, speed: 4, direction: "none", random: false, straight: false, out_mode: "out", bounce: false }, // Slower movement
-        },
-        interactivity: {
-          detect_on: "canvas",
-          events: { onhover: { enable: true, mode: "repulse" }, onclick: { enable: true, mode: "push" }, resize: true },
-        },
-        retina_detect: true,
-      });
-      
-      // Typed.js for Typing Effect
-      const options = {
-        strings: ["Business Analyst", "Data Scientist", "Tech Enthusiast", "Creative Leader"],
-        typeSpeed: 100,
-        backSpeed: 50,
-        backDelay: 1000,
-        loop: true
-      };
-      
-      // Only initialize if the element exists
-      if (document.getElementById("typed-text")) {
-        const typed = new Typed("#typed-text", options);
-      }
-    });
-
-    // Scroll to Top Button Visibility
-    window.onscroll = function() {
-      const btn = document.getElementById("scrollToTopBtn");
-      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        btn.style.display = "block";
-      } else {
-        btn.style.display = "none";
-      }
-    };
-
-    // Scroll to Top Function
-    document.getElementById("scrollToTopBtn").onclick = function() {
-      document.body.scrollTop = 0;
-      document.documentElement.scrollTop = 0;
-    };
-    
-    // Smooth scrolling for navigation links
-    document.querySelectorAll('nav a').forEach(anchor => {
-      anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        
-        const targetId = this.getAttribute('href');
-        const targetElement = document.querySelector(targetId);
-        
-        if (targetElement) {
-          targetElement.scrollIntoView({
-            behavior: 'smooth'
-          });
-        }
-      });
-    });
-  </script>
 </body>
 </html>
