@@ -19,8 +19,8 @@
       background: #333;
       color: white;
       text-align: center;
-      padding: 100px 20px;
-      min-height: 100vh;
+      padding: 60px 20px; /* Reduced padding */
+      min-height: 80vh; /* Reduced height */
     }
 
     .hero h1 {
@@ -36,7 +36,7 @@
     /* Navigation */
     nav {
       background: #222;
-      padding: 15px;
+      padding: 10px; /* Reduced padding */
     }
 
     .nav-links {
@@ -48,13 +48,13 @@
     }
 
     .nav-links li {
-      margin: 0 1rem;
+      margin: 0 0.8rem; /* Reduced margin */
     }
 
     .nav-links a {
       color: white;
       text-decoration: none;
-      font-size: 1.2em;
+      font-size: 1.1em; /* Slightly smaller font */
       transition: 0.3s;
     }
 
@@ -64,32 +64,43 @@
 
     /* Sections */
     section {
-      padding: 60px 20px;
+      padding: 30px 20px; /* Reduced padding */
       background: #f4f4f4;
-      min-height: 100vh;
+      min-height: auto; /* Remove fixed height */
       box-sizing: border-box;
       margin: 0;
+      border-bottom: 1px solid #ddd; /* Add separator */
     }
 
     section h2 {
       text-align: center;
-      font-size: 2em;
+      font-size: 1.8em; /* Slightly smaller heading */
+      margin-top: 0; /* Remove top margin */
+      margin-bottom: 15px; /* Reduced bottom margin */
+    }
+    
+    section p {
+      margin-top: 0; /* Remove top margin */
     }
 
     .projects-grid {
       display: flex;
       justify-content: space-around;
       flex-wrap: wrap;
+      gap: 10px; /* Add gap instead of margin */
     }
 
     .project-card {
       background: #fff;
       border: 1px solid #ddd;
-      padding: 20px;
-      margin: 10px;
+      padding: 15px; /* Reduced padding */
       width: 250px;
       box-sizing: border-box;
       text-align: center;
+    }
+    
+    .project-card h3 {
+      margin-top: 0; /* Remove top margin */
     }
 
     /* Footer */
@@ -97,21 +108,25 @@
       background: #222;
       color: white;
       text-align: center;
-      padding: 20px;
+      padding: 15px; /* Reduced padding */
       position: relative;
+    }
+    
+    footer p {
+      margin: 0; /* Remove margin */
     }
 
     /* Scroll to Top Button */
     #scrollToTopBtn {
       position: fixed;
-      bottom: 30px;
-      right: 30px;
+      bottom: 20px; /* Reduced distance from bottom */
+      right: 20px; /* Reduced distance from right */
       background-color: #f39c12;
       color: white;
       border: none;
-      padding: 10px 15px;
+      padding: 8px 12px; /* Reduced padding */
       cursor: pointer;
-      font-size: 20px;
+      font-size: 18px; /* Slightly smaller font */
       border-radius: 5px;
       display: none;
     }
@@ -124,6 +139,22 @@
     [data-aos] {
       transition: all 0.3s ease;
     }
+    
+    /* Particles container */
+    #particles-js {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: 1;
+    }
+    
+    /* Make sure content is above particles */
+    header, section, footer {
+      position: relative;
+      z-index: 2;
+    }
   </style>
 
   <!-- External Libraries -->
@@ -135,7 +166,6 @@
 </head>
 
 <body>
-
   <!-- Particles Background -->
   <div id="particles-js"></div>
 
@@ -240,9 +270,7 @@
       loop: true
     };
     const typed = new Typed("#typed-text", options);
-  </script>
-
-  <script>
+    
     // Initialize Particles.js for background
     particlesJS("particles-js", {
       particles: {
@@ -264,6 +292,5 @@
       retina_detect: true,
     });
   </script>
-
 </body>
 </html>
