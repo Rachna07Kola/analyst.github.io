@@ -3,13 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Business Analyst Portfolio Harshitha</title>
-
+  <title>Harshitha's Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/3d5c46f6e6.js" crossorigin="anonymous"></script>
-
   <style>
-    /* CSS Styles Start Here */
     :root {
       --primary: #2a6592;
       --secondary: #f39c12;
@@ -17,7 +14,6 @@
       --light: #f5f5f5;
       --transition: all 0.3s ease;
     }
-
     * {
       margin: 0;
       padding: 0;
@@ -25,28 +21,21 @@
       font-family: 'Poppins', sans-serif;
       scroll-behavior: smooth; /* Add smooth scrolling */
     }
-
     body {
       background-color: var(--light);
       color: var(--dark);
       overflow-x: hidden;
     }
-
-    /* Scrollbar styling */
     ::-webkit-scrollbar {
       width: 10px;
     }
-
     ::-webkit-scrollbar-track {
       background: var(--light);
     }
-
     ::-webkit-scrollbar-thumb {
       background: var(--primary);
       border-radius: 10px;
     }
-
-    /* Navigation */
     .navbar {
       position: fixed;
       top: 0;
@@ -56,12 +45,10 @@
       z-index: 1000;
       transition: var(--transition);
     }
-
     .navbar.scrolled {
       padding: 0.5rem 0;
       box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     }
-
     .nav-container {
       display: flex;
       justify-content: space-between;
@@ -70,23 +57,19 @@
       margin: 0 auto;
       padding: 0 2rem;
     }
-
     .logo {
       font-size: 1.5rem;
       font-weight: 700;
       color: var(--secondary);
       text-decoration: none;
     }
-
     .nav-links {
       display: flex;
       list-style: none;
     }
-
     .nav-links li {
       margin-left: 1.5rem;
     }
-
     .nav-links a {
       color: white;
       text-decoration: none;
@@ -95,11 +78,9 @@
       position: relative;
       padding: 0.5rem 0;
     }
-
     .nav-links a:hover {
       color: var(--secondary);
     }
-
     .nav-links a::after {
       content: '';
       position: absolute;
@@ -110,48 +91,41 @@
       background-color: var(--secondary);
       transition: var(--transition);
     }
-
     .nav-links a:hover::after {
       width: 100%;
     }
-
     .menu-toggle {
       display: none;
       cursor: pointer;
       color: white;
       font-size: 1.5rem;
     }
-
-    /* Hero Section */
     .hero {
-      min-height: 100vh; /* Use min-height for flexibility */
+      min-height: 100vh; 
       position: relative;
       display: flex;
       align-items: center;
-      justify-content: center; /* Center content horizontally */
+      justify-content: center; 
       background: linear-gradient(135deg, rgba(34, 40, 49, 0.9), rgba(42, 101, 146, 0.8));
       overflow: hidden;
-      text-align: center; /* Center text */
+      text-align: center; 
     }
-
     .hero-particles {
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
-      z-index: 1; /* Ensure particles are behind content if using a library */
+      z-index: 1; 
     }
-
     .hero-content {
       max-width: 1200px;
       margin: 0 auto;
-      padding: 5rem 2rem 2rem 2rem; /* Add padding top for fixed nav */
+      padding: 5rem 2rem 2rem 2rem;
       position: relative;
       z-index: 2;
       color: white;
     }
-
     .hero h1 {
       font-size: 4rem;
       margin-bottom: 1rem;
@@ -160,7 +134,6 @@
       transform: translateY(30px);
       animation: fadeUp 1s forwards 0.5s;
     }
-
     .hero h2 {
       font-size: 2.5rem;
       color: var(--secondary);
@@ -169,26 +142,23 @@
       transform: translateY(30px);
       animation: fadeUp 1s forwards 0.8s;
     }
-
     .hero p {
       font-size: 1.2rem;
       max-width: 600px;
-      margin: 0 auto 2rem auto; /* Center paragraph */
+      margin: 0 auto 2rem auto; 
       opacity: 0;
       transform: translateY(30px);
       animation: fadeUp 1s forwards 1.1s;
     }
-
     .cta-container {
       display: flex;
-      justify-content: center; /* Center buttons */
+      justify-content: center; 
       gap: 1rem;
       opacity: 0;
       transform: translateY(30px);
       animation: fadeUp 1s forwards 1.4s;
-      flex-wrap: wrap; /* Allow buttons to wrap */
+      flex-wrap: wrap; 
     }
-
     .cta-btn {
       display: inline-block;
       padding: 0.8rem 2rem;
@@ -197,23 +167,19 @@
       text-decoration: none;
       transition: var(--transition);
     }
-
     .primary-btn {
       background-color: var(--secondary);
       color: var(--dark);
     }
-
     .primary-btn:hover {
       background-color: white;
       transform: translateY(-3px);
       box-shadow: 0 10px 20px rgba(0,0,0,0.1);
     }
-
     .secondary-btn {
       border: 2px solid white;
       color: white;
     }
-
     .secondary-btn:hover {
       background-color: white;
       color: var(--dark);
@@ -1368,8 +1334,8 @@
   <section class="hero" id="home">
     <div class="hero-content">
       <h1>Hi, I'm Harshitha</h1>
-      <h2>Business Analyst & Data Scientist</h2>
-      <p>Blending technical expertise with business insights to develop valuable data-driven solutions. Based in Denton, TX.</p>
+      <h2>Business Analyst</h2>
+      <p>Graduate student with a Master’s in Business Analytics and a Bachelor's in Computer Applications, dedicated to delivering strategic and technology-driven business solutions. Skilled in tools such as Microsoft Excel, SQL, Power BI, Oracle NetSuite, Microsoft Dynamics 365, and SAP.</p>
       <div class="cta-container">
         <a href="#projects" class="cta-btn primary-btn">View My Work</a>
         <a href="#contact" class="cta-btn secondary-btn">Get In Touch</a>
@@ -1380,39 +1346,84 @@
   <section id="about" class="about-section">
     <div class="section-container">
       <div class="section-title">
-        <h2>About Me</h2>
+        <h2>Career Summary</h2>
       </div>
       <div class="about-content">
         <div class="about-text fade-up">
-          <p>As a Business Analytics graduate student and University of North Texas graduate I hold Bachelors degrees in Commerce and Computer Applications. My academic records present myself as a student who maintained a 4.0 GPA during my undergraduate studies and now earns a 3.5 GPA because I combine this achievement with practical knowledge in data analytics and enterprise technology and reporting systems.</p>
-          <p>I use Python, R, SQL, Tableau, and Power BI in combination with my capabilities in financial and ERP platforms including SAP, Oracle NetSuite and Microsoft Dynamics 365. My combination of strategic thinking and creative decision-making arises when I mentor students through social outreach activities and leadership roles in entrepreneurship events and successful creative projects.</p>
-          <p>My approach to dealing with challenges includes discipline along with precision and collaborative temperaments since I swim nationally and participate in the UNT Business Analytics Club activities. My portfolio provides an integrated perspective of my development which brings together business intelligence capabilities with technical expertise and strong value-driven approaches.</p>
-          </div>
+          <p>As a Master’s in Business Analytics student at the University of North Texas I work with precision and analysis to bring my commerce and computer applications education to detail-driven analyses. Within my field I use my expertise to perform data interpretation and predictive analytics together with developing business strategies. I bring my enthusiasm toward data interpretation to develop precise insights which enable sound organizational choices and promote organizational development.</p>
         </div>
     </div>
   </section>
 
   <section id="skills" class="skills-section">
-    <div class="section-container">
-      <div class="section-title">
-        <h2>Technical & Analytical Skills</h2>
-      </div>
-      <div class="skills-container">
-        <p style="text-align:center; grid-column: 1 / -1;"><i>Skills content goes here...</i></p>
-      </div>
+  <div class="section-container">
+    <div class="section-title">
+      <h2>Technical & Analytical Skills</h2>
     </div>
-  </section>
+    <div class="skills-container">
+      <ul>
+        <li><strong>Languages & Programming:</strong> Python, R, SQL</li>
+        <li><strong>Visualization & BI Tools:</strong> Tableau, Power BI, Excel</li>
+        <li><strong>Machine Learning & Analysis:</strong> TensorFlow, PyTorch, Predictive Analytics, Data Mining</li>
+        <li><strong>Accounting & Finance Tools:</strong> Tally ERP9/Prime, QuickBooks, Sage Accounting, TaxCalc</li>
+        <li><strong>ERP & Financial Systems:</strong> SAP (FI Module), Oracle NetSuite, Microsoft Dynamics 365 Finance</li>
+        <li><strong>Cloud-Based Platforms & Tools:</strong> Google Sheets, OneDrive, Adaptive Insights</li>
+        <li><strong>Other:</strong> Agile Project Management, Microsoft Office Suite</li>
+      </ul>
+    </div>
+  </div>
+</section>
 
-  <section id="projects" class="projects-section">
-    <div class="section-container">
-      <div class="section-title">
-        <h2>Projects</h2>
-      </div>
-      <div class="projects-grid">
-        <p style="text-align:center; grid-column: 1 / -1;"><i>Projects content goes here...</i></p>
-      </div>
+
+<section id="projects" class="projects-section">
+  <div class="section-container">
+    <div class="section-title">
+      <h2>Projects</h2>
     </div>
-  </section>
+    <div class="projects-grid">
+      
+      <div class="project">
+        <h3>Project 01: Visualizing Global Trends in Child Malnutrition</h3>
+        <p><strong>Overview:</strong> Delivered a comprehensive, data-driven analysis using WHO, UNICEF, and World Bank datasets to explore global child malnutrition. Key indicators such as stunting, wasting, underweight, and overweight were visualized across demographics and geographies.</p>
+        
+        <p><strong>Key Deliverables:</strong></p>
+        <ul>
+          <li><strong>Interactive Dashboards:</strong> 
+            <ul>
+              <li>Malnutrition Severity Dashboard with filters by country, region, gender, and year.</li>
+              <li>Child Malnutrition Patterns Dashboard showing age-specific trends.</li>
+              <li>Visualization elements included geospatial heatmaps, time-series charts, scatter plots, box plots, and area charts.</li>
+            </ul>
+          </li>
+          <li><strong>Data Engineering:</strong> Data cleansing, handling missing values, deduplication, and age group standardization for performance optimization.</li>
+          <li><strong>Analytical Insights:</strong> Identified high-risk regions (e.g., Yemen, Papua New Guinea), explored demographic disparities, and mapped historical trends from 1970–2022.</li>
+        </ul>
+
+        <p><strong>Technical Stack:</strong> Tableau / Power BI, Python (Pandas, NumPy), Excel / Google Sheets</p>
+        <p><strong>Impact:</strong> Enabled policy-level decision-making through interactive, evidence-based visualizations to combat global malnutrition.</p>
+      </div>
+
+      <div class="project">
+        <h3>Project 02: Hiring Assistant AI – Agentic Resume Screening System</h3>
+        <p><strong>Overview:</strong> Developed a privacy-focused, locally-operable AI assistant for resume screening using Agentic AI and Retrieval-Augmented Generation (RAG), streamlining hiring for TechCorp Solutions.</p>
+        
+        <p><strong>Core Features:</strong></p>
+        <ul>
+          <li>Resume Parsing with PyMuPDF</li>
+          <li>Semantic Matching using SentenceTransformers for deep contextual alignment</li>
+          <li>Hybrid Scoring combining embedding similarity and rubric-based evaluation using Pandas</li>
+          <li>Real-time recruiter interaction using Mistral-7B-Instruct with chatbot feedback loop</li>
+          <li>Privacy-first offline operation with no external cloud dependencies</li>
+        </ul>
+
+        <p><strong>Technologies & Architecture:</strong> Python 3.x, Streamlit, PyMuPDF, SentenceTransformers, Pandas, ctransformers, Mistral-7B-Instruct (quantized), RAG-based NLP pipeline</p>
+        <p><strong>Outcomes:</strong> Accelerated hiring, improved fairness and explainability, and reduced costs through local inference and adaptable decision criteria.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 
   <section id="experience" class="experience-section">
     <div class="section-container">
@@ -1428,7 +1439,7 @@
   <section id="education" class="education-section">
     <div class="section-container">
       <div class="section-title">
-        <h2>Education & Certifications</h2>
+        <h2>Education</h2>
       </div>
       <div class="education-container">
         <p style="text-align:center; grid-column: 1 / -1;"><i>Education content goes here...</i></p>
