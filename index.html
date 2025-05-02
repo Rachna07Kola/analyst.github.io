@@ -1388,47 +1388,7 @@
   </div>
 </section>
 
-  <section id="projects" class="projects-section">
-  <div class="section-container">
-    <div class="section-title">
-      <h2>Projects</h2>
-    </div>
-
-    <!-- Project 01 -->
-    <div class="project fade-in">
-      <h3>Project 01: Visualizing Global Trends in Child Malnutrition</h3>
-      <p><strong>Overview:</strong> Conducted a comprehensive analysis using datasets from WHO, UNICEF, and the World Bank to explore global child malnutrition trends. Key indicators such as stunting, wasting, underweight, and overweight were visualized across various demographics and regions.</p>
-      <div class="cta-container">
-        <a href="https://data.unicef.org/resources/dataset/malnutrition-data/" target="_blank" class="cta-btn primary-btn">View Dataset</a>
-        <button onclick="toggleHighlight('highlight1')" class="cta-btn secondary-btn">Show Key Highlight</button>
-      </div>
-      <p id="highlight1" class="highlight-text" style="display:none;"><strong>Highlight:</strong> Identified Yemen and Papua New Guinea as critical hotspots for intervention, influencing NGO outreach planning.</p>
-    </div>
-
-    <!-- Project 02 -->
-    <div class="project fade-in">
-      <h3>Project 02: Hiring Assistant AI – Agentic Resume Screening System</h3>
-      <p><strong>Overview:</strong> Developed a privacy-focused, locally-operable AI assistant for resume screening using Agentic AI and Retrieval-Augmented Generation (RAG), streamlining hiring processes.</p>
-      <div class="cta-container">
-        <a href="https://github.com/AmruthaRajsheker/AI-Driven-Banking-Fraud-Detection-and-Prevention-System" target="_blank" class="cta-btn primary-btn">View Repository</a>
-        <button onclick="toggleHighlight('highlight2')" class="cta-btn secondary-btn">Show Key Highlight</button>
-      </div>
-      <p id="highlight2" class="highlight-text" style="display:none;"><strong>Highlight:</strong> Reduced hiring cycle time by 40% and introduced a transparent, bias-aware candidate scoring method.</p>
-    </div>
-
-    <!-- Project 03 -->
-    <div class="project fade-in">
-      <h3>Project 03: AI-Based Fraud Detection System in Banking</h3>
-      <p><strong>Overview:</strong> Designed an AI-powered fraud detection system tailored for the banking sector to proactively identify and mitigate threats like identity theft, unauthorized transactions, and cyber-fraud.</p>
-      <div class="cta-container">
-        <a href="https://github.com/AmruthaRajsheker/AI-Driven-Banking-Fraud-Detection-and-Prevention-System" target="_blank" class="cta-btn primary-btn">View Repository</a>
-        <button onclick="toggleHighlight('highlight3')" class="cta-btn secondary-btn">Show Key Highlight</button>
-      </div>
-      <p id="highlight3" class="highlight-text" style="display:none;"><strong>Highlight:</strong> Detected fraud in under 300 ms with a precision increase of 25%, while fully aligning with GDPR and CCPA mandates.</p>
-    </div>
-
-  </div>
-</section>
+  
 
   <section id="experience" class="experience-section">
     <div class="section-container">
@@ -1456,7 +1416,43 @@
       </div>
     </div>
   </section>
+<section id="projects" class="projects-section">
+  <div class="section-container">
+    <div class="section-title">
+      <h2>Projects</h2>
+    </div>
 
+    <!-- Project 01 -->
+    <div class="project fade-in">
+      <button class="project-toggle-btn" onclick="toggleProject('project1')">Project 01: Visualizing Global Trends in Child Malnutrition</button>
+      <div id="project1" class="project-details" style="display: none;">
+        <p><strong>Overview:</strong> Conducted a comprehensive analysis using datasets from WHO, UNICEF, and the World Bank to explore global child malnutrition trends. Key indicators such as stunting, wasting, underweight, and overweight were visualized across various demographics and regions.</p>
+        <a href="https://data.unicef.org/resources/dataset/malnutrition-data/" target="_blank" class="cta-btn primary-btn">View Dataset</a>
+        <p><strong>Highlight:</strong> Identified Yemen and Papua New Guinea as critical hotspots for intervention, influencing NGO outreach planning.</p>
+      </div>
+    </div>
+
+    <!-- Project 02 -->
+    <div class="project fade-in">
+      <button class="project-toggle-btn" onclick="toggleProject('project2')">Project 02: Hiring Assistant AI – Agentic Resume Screening System</button>
+      <div id="project2" class="project-details" style="display: none;">
+        <p><strong>Overview:</strong> Developed a privacy-focused, locally-operable AI assistant for resume screening using Agentic AI and Retrieval-Augmented Generation (RAG), streamlining hiring processes.</p>
+        <a href="https://github.com/AmruthaRajsheker/AI-Driven-Banking-Fraud-Detection-and-Prevention-System" target="_blank" class="cta-btn primary-btn">View Repository</a>
+        <p><strong>Highlight:</strong> Reduced hiring cycle time by 40% and introduced a transparent, bias-aware candidate scoring method.</p>
+      </div>
+    </div>
+
+    <!-- Project 03 -->
+    <div class="project fade-in">
+      <button class="project-toggle-btn" onclick="toggleProject('project3')">Project 03: AI-Based Fraud Detection System in Banking</button>
+      <div id="project3" class="project-details" style="display: none;">
+        <p><strong>Overview:</strong> Designed an AI-powered fraud detection system tailored for the banking sector to proactively identify and mitigate threats like identity theft, unauthorized transactions, and cyber-fraud.</p>
+        <a href="https://github.com/AmruthaRajsheker/AI-Driven-Banking-Fraud-Detection-and-Prevention-System" target="_blank" class="cta-btn primary-btn">View Repository</a>
+        <p><strong>Highlight:</strong> Detected fraud in under 300 ms with a precision increase of 25%, while fully aligning with GDPR and CCPA mandates.</p>
+      </div>
+    </div>
+  </div>
+</section>
   <section id="leadership" class="leadership-section">
     <div class="section-container">
       <div class="section-title">
