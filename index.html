@@ -1391,18 +1391,15 @@
   </div>
 </section>
 
-
 <section id="projects" class="projects-section">
-  <div class="section-container">
-    <div class="section-title">
-      <h2>Projects</h2>
-    </div>
-    <div class="projects-grid">
-      
-      <div class="project">
+    <div class="section-container">
+      <div class="section-title">
+        <h2>Projects</h2>
+      </div>
+
+      <div class="project fade-in">
         <h3>Project 01: Visualizing Global Trends in Child Malnutrition</h3>
         <p><strong>Overview:</strong> Delivered a comprehensive, data-driven analysis using WHO, UNICEF, and World Bank datasets to explore global child malnutrition. Key indicators such as stunting, wasting, underweight, and overweight were visualized across demographics and geographies.</p>
-        
         <p><strong>Key Deliverables:</strong></p>
         <ul>
           <li><strong>Interactive Dashboards:</strong> 
@@ -1415,15 +1412,13 @@
           <li><strong>Data Engineering:</strong> Data cleansing, handling missing values, deduplication, and age group standardization for performance optimization.</li>
           <li><strong>Analytical Insights:</strong> Identified high-risk regions (e.g., Yemen, Papua New Guinea), explored demographic disparities, and mapped historical trends from 1970–2022.</li>
         </ul>
-
         <p><strong>Technical Stack:</strong> Tableau / Power BI, Python (Pandas, NumPy), Excel / Google Sheets</p>
         <p><strong>Impact:</strong> Enabled policy-level decision-making through interactive, evidence-based visualizations to combat global malnutrition.</p>
       </div>
 
-      <div class="project">
+      <div class="project fade-in">
         <h3>Project 02: Hiring Assistant AI – Agentic Resume Screening System</h3>
         <p><strong>Overview:</strong> Developed a privacy-focused, locally-operable AI assistant for resume screening using Agentic AI and Retrieval-Augmented Generation (RAG), streamlining hiring for TechCorp Solutions.</p>
-        
         <p><strong>Core Features:</strong></p>
         <ul>
           <li>Resume Parsing with PyMuPDF</li>
@@ -1432,14 +1427,13 @@
           <li>Real-time recruiter interaction using Mistral-7B-Instruct with chatbot feedback loop</li>
           <li>Privacy-first offline operation with no external cloud dependencies</li>
         </ul>
-
         <p><strong>Technologies & Architecture:</strong> Python 3.x, Streamlit, PyMuPDF, SentenceTransformers, Pandas, ctransformers, Mistral-7B-Instruct (quantized), RAG-based NLP pipeline</p>
         <p><strong>Outcomes:</strong> Accelerated hiring, improved fairness and explainability, and reduced costs through local inference and adaptable decision criteria.</p>
       </div>
 
     </div>
-  </div>
-</section>
+  </section>
+
 
 
   <section id="experience" class="experience-section">
@@ -1632,6 +1626,20 @@
 
     fadeUpElements.forEach(el => {
       observer.observe(el);
+    });
+    
+    const faders = document.querySelectorAll('.fade-in');
+    const appearOnScroll = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          appearOnScroll.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.2 });
+
+    faders.forEach(fade => {
+      appearOnScroll.observe(fade);
     });
 
   </script>
