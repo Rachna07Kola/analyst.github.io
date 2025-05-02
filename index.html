@@ -1325,6 +1325,92 @@
   border: none;
 }
 
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f4f6f9;
+  margin: 0;
+  padding: 0 20px;
+}
+
+.projects-section {
+  max-width: 900px;
+  margin: 60px auto;
+}
+
+.section-title h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #222;
+}
+
+.project {
+  background: #fff;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.project-toggle-btn {
+  width: 100%;
+  padding: 18px 24px;
+  background-color: #004aad;
+  color: #fff;
+  text-align: left;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.project-toggle-btn:hover {
+  background-color: #003080;
+}
+
+.project-details {
+  padding: 20px 24px;
+  display: none;
+  animation: fadeSlide 0.4s ease-in-out forwards;
+}
+
+@keyframes fadeSlide {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.project-details p {
+  margin: 12px 0;
+  color: #444;
+  line-height: 1.6;
+}
+
+.cta-btn {
+  display: inline-block;
+  margin-top: 12px;
+  margin-right: 10px;
+  padding: 10px 16px;
+  background-color: #1f78d1;
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.95rem;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.cta-btn:hover {
+  background-color: #135ca7;
+}
+
+
     /* CSS Styles End Here */
   </style>
 </head>
@@ -1416,43 +1502,50 @@
       </div>
     </div>
   </section>
-<section id="projects" class="projects-section">
-  <div class="section-container">
+
+  <section id="projects" class="projects-section">
     <div class="section-title">
       <h2>Projects</h2>
     </div>
 
     <!-- Project 01 -->
-    <div class="project fade-in">
-      <button class="project-toggle-btn" onclick="toggleProject('project1')">Project 01: Visualizing Global Trends in Child Malnutrition</button>
-      <div id="project1" class="project-details" style="display: none;">
-        <p><strong>Overview:</strong> Conducted a comprehensive analysis using datasets from WHO, UNICEF, and the World Bank to explore global child malnutrition trends. Key indicators such as stunting, wasting, underweight, and overweight were visualized across various demographics and regions.</p>
-        <a href="https://data.unicef.org/resources/dataset/malnutrition-data/" target="_blank" class="cta-btn primary-btn">View Dataset</a>
-        <p><strong>Highlight:</strong> Identified Yemen and Papua New Guinea as critical hotspots for intervention, influencing NGO outreach planning.</p>
+    <div class="project">
+      <button class="project-toggle-btn" onclick="toggleProject('project1')">
+        Project 01: Visualizing Global Trends in Child Malnutrition
+      </button>
+      <div id="project1" class="project-details">
+        <p><strong>Overview:</strong> Conducted a comprehensive analysis using datasets from WHO, UNICEF, and the World Bank to explore global child malnutrition trends.</p>
+        <p><strong>Key Metrics:</strong> Stunting, wasting, underweight, and overweight across regions.</p>
+        <a href="https://data.unicef.org/resources/dataset/malnutrition-data/" target="_blank" class="cta-btn">🌐 View Dataset</a>
+        <p><strong>Highlight:</strong> Identified Yemen and Papua New Guinea as critical hotspots, influencing NGO outreach planning.</p>
       </div>
     </div>
 
     <!-- Project 02 -->
-    <div class="project fade-in">
-      <button class="project-toggle-btn" onclick="toggleProject('project2')">Project 02: Hiring Assistant AI – Agentic Resume Screening System</button>
-      <div id="project2" class="project-details" style="display: none;">
-        <p><strong>Overview:</strong> Developed a privacy-focused, locally-operable AI assistant for resume screening using Agentic AI and Retrieval-Augmented Generation (RAG), streamlining hiring processes.</p>
-        <a href="https://github.com/AmruthaRajsheker/AI-Driven-Banking-Fraud-Detection-and-Prevention-System" target="_blank" class="cta-btn primary-btn">View Repository</a>
-        <p><strong>Highlight:</strong> Reduced hiring cycle time by 40% and introduced a transparent, bias-aware candidate scoring method.</p>
+    <div class="project">
+      <button class="project-toggle-btn" onclick="toggleProject('project2')">
+        Project 02: Hiring Assistant AI – Agentic Resume Screening System
+      </button>
+      <div id="project2" class="project-details">
+        <p><strong>Overview:</strong> Built a privacy-focused, local AI assistant using Retrieval-Augmented Generation (RAG) for automating resume screening.</p>
+        <p><strong>Impact:</strong> Reduced hiring cycle time by 40% and improved transparency with bias-aware scoring.</p>
+        <a href="https://github.com/AmruthaRajsheker/AI-Driven-Banking-Fraud-Detection-and-Prevention-System" target="_blank" class="cta-btn">💻 View Repository</a>
       </div>
     </div>
 
     <!-- Project 03 -->
-    <div class="project fade-in">
-      <button class="project-toggle-btn" onclick="toggleProject('project3')">Project 03: AI-Based Fraud Detection System in Banking</button>
-      <div id="project3" class="project-details" style="display: none;">
-        <p><strong>Overview:</strong> Designed an AI-powered fraud detection system tailored for the banking sector to proactively identify and mitigate threats like identity theft, unauthorized transactions, and cyber-fraud.</p>
-        <a href="https://github.com/AmruthaRajsheker/AI-Driven-Banking-Fraud-Detection-and-Prevention-System" target="_blank" class="cta-btn primary-btn">View Repository</a>
-        <p><strong>Highlight:</strong> Detected fraud in under 300 ms with a precision increase of 25%, while fully aligning with GDPR and CCPA mandates.</p>
+    <div class="project">
+      <button class="project-toggle-btn" onclick="toggleProject('project3')">
+        Project 03: AI-Based Fraud Detection System in Banking
+      </button>
+      <div id="project3" class="project-details">
+        <p><strong>Overview:</strong> Created an AI-powered fraud detection platform for banking, identifying threats like identity theft and cyber-fraud.</p>
+        <p><strong>Performance:</strong> Achieved sub-300ms fraud detection and 25% precision improvement, fully GDPR/CCPA compliant.</p>
+        <a href="https://github.com/AmruthaRajsheker/AI-Driven-Banking-Fraud-Detection-and-Prevention-System" target="_blank" class="cta-btn">🔗 View Repository</a>
       </div>
     </div>
-  </div>
-</section>
+
+  </section>
   <section id="leadership" class="leadership-section">
     <div class="section-container">
       <div class="section-title">
@@ -1586,7 +1679,18 @@
     faders.forEach(fade => {
       appearOnScroll.observe(fade);
     });
+    function toggleProject(id) {
+      const details = document.getElementById(id);
+      const all = document.querySelectorAll('.project-details');
 
+      all.forEach(section => {
+        if (section.id !== id) {
+          section.style.display = "none";
+        }
+      });
+
+      details.style.display = (details.style.display === "block") ? "none" : "block";
+    }
   </script>
   </body>
 </html>
