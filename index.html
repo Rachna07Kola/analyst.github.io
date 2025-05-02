@@ -999,6 +999,63 @@
       color: #aaa;
       font-size: 0.9rem;
     }
+.education-section {
+  padding: 60px 20px;
+  background: #f8f9fa;
+  text-align: center;
+}
+
+.section-title h2 {
+  font-size: 2.5em;
+  margin-bottom: 40px;
+  position: relative;
+  display: inline-block;
+}
+
+.education-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.edu-card {
+  background: white;
+  border-radius: 15px;
+  padding: 25px;
+  max-width: 450px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: left;
+}
+
+.edu-card h3 {
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.edu-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Animation */
+.animate {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 1s ease forwards;
+}
+
+.animate:nth-child(2) {
+  animation-delay: 0.3s;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
     /* ScrollToTop Button */
     .scroll-top {
@@ -1426,7 +1483,6 @@ body {
         <li><a href="#projects" class="nav-link">Projects</a></li>
         <li><a href="#experience" class="nav-link">Experience</a></li>
         <li><a href="#education" class="nav-link">Education</a></li>
-        <li><a href="#leadership" class="nav-link">Leadership</a></li>
         <li><a href="#contact" class="nav-link">Contact</a></li>
       </ul>
     </div>
@@ -1488,20 +1544,28 @@ body {
   </section>
 
   <section id="education" class="education-section">
-    <div class="section-container">
-      <div class="section-title">
-        <h2>Education</h2>
+  <div class="section-container">
+    <div class="section-title">
+      <h2>Education</h2>
+    </div>
+    <div class="education-cards">
+      <div class="edu-card animate">
+        <h3>University of North Texas, Denton, TX</h3>
+        <p><strong>Master of Science in Business Analytics</strong></p>
+        <p><em>GPA: 3.5 | Expected: Dec 2025</em></p>
+        <p><strong>Key Courses:</strong> Data Visualization, Data Mining, Predictive Analysis, Business Statistics</p>
       </div>
-      <div class="education-container">
-        <p style="text-align:center; grid-column: 1 / -1;"><i>University of North Texas, Denton, TX
-        Master of Science in Business Analytics | GPA: 3.5 | Expected: Dec 2025
-        Key Courses: Data Visualization, Data Mining, Predictive Analysis, Business Statistics</i></p>
-        <p style="text-align:center; grid-column: 1 / -1;"><i>St. Pious X Degree College, Hyderabad, India
-        Bachelor of Commerce in Computer Applications | GPA: 4.0 | Graduated: May 2023
-        Relevant Courses: Financial Planning and Performance, E-Commerce, IFRS, Business Statistics, Cost Accounting, Business Economics</i></p>
+
+      <div class="edu-card animate">
+        <h3>St. Pious X Degree College, Hyderabad, India</h3>
+        <p><strong>Bachelor of Commerce in Computer Applications</strong></p>
+        <p><em>GPA: 4.0 | Graduated: May 2023</em></p>
+        <p><strong>Relevant Courses:</strong> Financial Planning, E-Commerce, IFRS, Business Stats, Cost Accounting, Business Economics</p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
+
 
   <section id="projects" class="projects-section">
     <div class="section-title">
