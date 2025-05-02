@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Harshitha's Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <script src="https://kit.fontawesome.com/3d5c46f6e6.js" crossorigin="anonymous"></script>
   <style>
     :root {
@@ -1433,8 +1434,39 @@
 
     </div>
   </section>
+      <div class="project">
+        <h3>Project 03: AI-Based Fraud Detection System in Banking</h3>
+        <p><strong>Overview:</strong> Designed an AI-powered fraud detection system tailored for the banking sector to proactively identify and mitigate threats like identity theft, unauthorized transactions, and cyber-fraud. It replaces static rule-based methods with adaptive ML capable of real-time fraud detection and continuous learning.</p>
+        
+        <p><strong>Core System Features:</strong></p>
+        <ul>
+          <li><strong>Real-Time Transaction Monitoring:</strong> Pattern recognition and anomaly detection ensure near-instant scoring (latency under 300 ms).</li>
+          <li><strong>Machine Learning Integration:</strong>
+            <ul>
+              <li><em>Supervised Learning:</em> Detects known fraud patterns via labeled historical data.</li>
+              <li><em>Unsupervised Learning:</em> Clusters and flags unknown emerging fraud behaviors.</li>
+            </ul>
+          </li>
+          <li><strong>Case Management:</strong> Analysts review flagged cases with model feedback for refinement.</li>
+          <li><strong>Risk Scoring & Alerts:</strong> Dynamic scoring triggers alerts via dashboard, email, and SMS.</li>
+          <li><strong>Explainability & Compliance:</strong> SHAP/LIME integration for interpretable AI; supports GDPR, PCI DSS, AML, and KYC compliance.</li>
+        </ul>
 
+        <p><strong>Technical & Architectural Highlights:</strong></p>
+        <ul>
+          <li><strong>Functional Requirements:</strong> Adaptive learning, manual overrides, real-time feedback loop.</li>
+          <li><strong>Non-Functional:</strong> 99.99% uptime, scalable containers, AES-256 encryption, TLS 1.3, MFA, RBAC.</li>
+          <li><strong>Ethics & Compliance:</strong> GDPR/CCPA-ready, bias mitigation, and transparent AI decisioning.</li>
+        </ul>
 
+        <p><strong>Use Cases:</strong></p>
+        <ul>
+          <li>Real-time fraud detection & intervention</li>
+          <li>Case-based resolution workflow with model feedback</li>
+        </ul>
+
+        <p><strong>Impact:</strong> Boosted fraud prevention efficiency, improved customer trust, reduced financial losses, and ensured regulatory compliance with explainable AI models.</p>
+      </div>
 
   <section id="experience" class="experience-section">
     <div class="section-container">
@@ -1453,7 +1485,12 @@
         <h2>Education</h2>
       </div>
       <div class="education-container">
-        <p style="text-align:center; grid-column: 1 / -1;"><i>Education content goes here...</i></p>
+        <p style="text-align:center; grid-column: 1 / -1;"><i>University of North Texas, Denton, TX
+        Master of Science in Business Analytics | GPA: 3.5 | Expected: Dec 2025
+        Key Courses: Data Visualization, Data Mining, Predictive Analysis, Business Statistics</i></p>
+        <p style="text-align:center; grid-column: 1 / -1;"><i>St. Pious X Degree College, Hyderabad, India
+        Bachelor of Commerce in Computer Applications | GPA: 4.0 | Graduated: May 2023
+        Relevant Courses: Financial Planning and Performance, E-Commerce, IFRS, Business Statistics, Cost Accounting, Business Economics</i></p>
       </div>
     </div>
   </section>
@@ -1464,48 +1501,42 @@
         <h2>Leadership & Community Involvement</h2>
       </div>
       <div class="leadership-container">
-        <p style="text-align:center; grid-column: 1 / -1;"><i>Leadership content goes here...</i></p>
+        <p style="text-align:center; grid-column: 1 / -1;"><i>Student Assistant Einstein Bros. Bagels, UNT, Denton, TX November 2024 – Present, Managed POS operations and customer order dispatch, reinforcing multitasking and reliability.</i></p>
+         <p style="text-align:center; grid-column: 1 / -1;"><i>Entrepreneurship Intern NSIC, Hyderabad, India November 2022 – March 2023, Participated in industrial awareness and entrepreneurial workshops focused on foundational business skills.</i></p>
+         <p style="text-align:center; grid-column: 1 / -1;"><i>Counselor Voice for Girls, Hyderabad, India August 2021 - November 2022, Provided mentorship and guidance to young students, fostering confidence and communication skills.</i></p>
       </div>
     </div>
   </section>
 
-  <section id="contact" class="contact-section">
-    <div class="section-container">
-      <div class="section-title">
-        <h2>Contact Me</h2>
-      </div>
-      <div class="contact-container">
-        <div class="contact-info fade-up">
-          <h3>Get in Touch</h3>
-          <p>Feel free to reach out via email or LinkedIn. I'm always open to discussing new projects, creative ideas, or opportunities.</p>
-          <ul class="contact-list">
-            <li><i class="fas fa-map-marker-alt"></i> Denton, TX, USA</li>
-            <li><i class="fas fa-envelope"></i> <a href="mailto:your.email@example.com">your.email@example.com</a></li>
-            <li><i class="fab fa-linkedin"></i> <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer">linkedin.com/in/yourprofile</a></li>
-            </ul>
-        </div>
-        <form class="contact-form fade-up" action="https://formspree.io/f/your_form_id" method="POST"> <h3>Send a Message</h3>
-          <div class="form-group">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" class="form-control" required>
-          </div>
-          <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" class="form-control" required>
-          </div>
-          <div class="form-group">
-            <label for="subject">Subject</label>
-            <input type="text" id="subject" name="subject" class="form-control">
-          </div>
-          <div class="form-group">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" class="form-control" required></textarea>
-          </div>
-          <button type="submit" class="submit-btn">Send Message</button>
-        </form>
+ <section id="contact" class="contact-section">
+  <div class="section-container">
+    <div class="section-title">
+      <h2>Contact Me</h2>
+    </div>
+    <div class="contact-container">
+      <div class="contact-icons fade-up">
+        <ul class="contact-list">
+          <li>
+            <a href="mailto:harshithasreiyapalaparthi@gmail.com" aria-label="Email">
+              <i class="fas fa-envelope"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.google.com/maps/place/Denton,+TX" target="_blank" rel="noopener noreferrer" aria-label="Location">
+              <i class="fas fa-map-marker-alt"></i>
+            </a>
+          </li>
+        </ul>
       </div>
     </div>
-  </section>
+  </div>
+</section>
+
 
   <footer>
     <div class="footer-container">
