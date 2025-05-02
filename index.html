@@ -18,7 +18,7 @@
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: 'Poppins', sans-serif;
+      font-family: 'Times New Roman', sans-serif;
       scroll-behavior: smooth; /* Add smooth scrolling */
     }
     body {
@@ -26,6 +26,18 @@
       color: var(--dark);
       overflow-x: hidden;
     }
+    body, html {
+  height: 100%;
+  font-family: Arial, sans-serif;
+   }
+    .parallax {
+  background-image: url('your-background-image.jpg');
+  min-height: 100vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  }
     ::-webkit-scrollbar {
       width: 10px;
     }
@@ -192,6 +204,11 @@
       padding: 5rem 0;
       scroll-margin-top: 70px; /* Offset for fixed navbar */
     }
+    .content-section {
+  padding: 100px 20px;
+  background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+  color: #333;
+}
 
     .section-container {
       max-width: 1200px;
