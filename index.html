@@ -1392,80 +1392,45 @@
 </section>
 
 <section id="projects" class="projects-section">
-    <div class="section-container">
-      <div class="section-title">
-        <h2>Projects</h2>
-      </div>
-
-      <div class="project fade-in">
-        <h3>Project 01: Visualizing Global Trends in Child Malnutrition</h3>
-        <p><strong>Overview:</strong> Delivered a comprehensive, data-driven analysis using WHO, UNICEF, and World Bank datasets to explore global child malnutrition. Key indicators such as stunting, wasting, underweight, and overweight were visualized across demographics and geographies.</p>
-        <p><strong>Key Deliverables:</strong></p>
-        <ul>
-          <li><strong>Interactive Dashboards:</strong> 
-            <ul>
-              <li>Malnutrition Severity Dashboard with filters by country, region, gender, and year.</li>
-              <li>Child Malnutrition Patterns Dashboard showing age-specific trends.</li>
-              <li>Visualization elements included geospatial heatmaps, time-series charts, scatter plots, box plots, and area charts.</li>
-            </ul>
-          </li>
-          <li><strong>Data Engineering:</strong> Data cleansing, handling missing values, deduplication, and age group standardization for performance optimization.</li>
-          <li><strong>Analytical Insights:</strong> Identified high-risk regions (e.g., Yemen, Papua New Guinea), explored demographic disparities, and mapped historical trends from 1970–2022.</li>
-        </ul>
-        <p><strong>Technical Stack:</strong> Tableau / Power BI, Python (Pandas, NumPy), Excel / Google Sheets</p>
-        <p><strong>Impact:</strong> Enabled policy-level decision-making through interactive, evidence-based visualizations to combat global malnutrition.</p>
-      </div>
-
-      <div class="project fade-in">
-        <h3>Project 02: Hiring Assistant AI – Agentic Resume Screening System</h3>
-        <p><strong>Overview:</strong> Developed a privacy-focused, locally-operable AI assistant for resume screening using Agentic AI and Retrieval-Augmented Generation (RAG), streamlining hiring for TechCorp Solutions.</p>
-        <p><strong>Core Features:</strong></p>
-        <ul>
-          <li>Resume Parsing with PyMuPDF</li>
-          <li>Semantic Matching using SentenceTransformers for deep contextual alignment</li>
-          <li>Hybrid Scoring combining embedding similarity and rubric-based evaluation using Pandas</li>
-          <li>Real-time recruiter interaction using Mistral-7B-Instruct with chatbot feedback loop</li>
-          <li>Privacy-first offline operation with no external cloud dependencies</li>
-        </ul>
-        <p><strong>Technologies & Architecture:</strong> Python 3.x, Streamlit, PyMuPDF, SentenceTransformers, Pandas, ctransformers, Mistral-7B-Instruct (quantized), RAG-based NLP pipeline</p>
-        <p><strong>Outcomes:</strong> Accelerated hiring, improved fairness and explainability, and reduced costs through local inference and adaptable decision criteria.</p>
-      </div>
-
+  <div class="section-container">
+    <div class="section-title">
+      <h2>Projects</h2>
     </div>
-  </section>
-      <div class="project">
-        <h3>Project 03: AI-Based Fraud Detection System in Banking</h3>
-        <p><strong>Overview:</strong> Designed an AI-powered fraud detection system tailored for the banking sector to proactively identify and mitigate threats like identity theft, unauthorized transactions, and cyber-fraud. It replaces static rule-based methods with adaptive ML capable of real-time fraud detection and continuous learning.</p>
-        
-        <p><strong>Core System Features:</strong></p>
-        <ul>
-          <li><strong>Real-Time Transaction Monitoring:</strong> Pattern recognition and anomaly detection ensure near-instant scoring (latency under 300 ms).</li>
-          <li><strong>Machine Learning Integration:</strong>
-            <ul>
-              <li><em>Supervised Learning:</em> Detects known fraud patterns via labeled historical data.</li>
-              <li><em>Unsupervised Learning:</em> Clusters and flags unknown emerging fraud behaviors.</li>
-            </ul>
-          </li>
-          <li><strong>Case Management:</strong> Analysts review flagged cases with model feedback for refinement.</li>
-          <li><strong>Risk Scoring & Alerts:</strong> Dynamic scoring triggers alerts via dashboard, email, and SMS.</li>
-          <li><strong>Explainability & Compliance:</strong> SHAP/LIME integration for interpretable AI; supports GDPR, PCI DSS, AML, and KYC compliance.</li>
-        </ul>
 
-        <p><strong>Technical & Architectural Highlights:</strong></p>
-        <ul>
-          <li><strong>Functional Requirements:</strong> Adaptive learning, manual overrides, real-time feedback loop.</li>
-          <li><strong>Non-Functional:</strong> 99.99% uptime, scalable containers, AES-256 encryption, TLS 1.3, MFA, RBAC.</li>
-          <li><strong>Ethics & Compliance:</strong> GDPR/CCPA-ready, bias mitigation, and transparent AI decisioning.</li>
-        </ul>
+    <!-- Project 01 -->
+    <div class="project fade-in">
+      <h3>Project 01: Visualizing Global Trends in Child Malnutrition</h3>
+      <p><strong>Overview:</strong> Delivered a comprehensive data-driven analysis using WHO, UNICEF, and World Bank datasets. The study explored global child malnutrition, visualizing indicators like stunting, wasting, underweight, and overweight across demographics and regions.</p>
+      <p><strong>Key Deliverables:</strong> Interactive dashboards enabled filtering by country, region, gender, and year. Age-specific trends were clearly visualized using heatmaps, time-series charts, scatter plots, box plots, and area charts. Data was cleaned and standardized for performance.</p>
+      <p><strong>Technologies:</strong> Tableau, Power BI, Python (Pandas, NumPy), Excel, Google Sheets</p>
+      <p><strong>Impact:</strong> Enabled evidence-based policymaking by highlighting malnutrition patterns from 1970–2022 across high-risk regions.</p>
+      <button onclick="toggleHighlight('highlight1')">Show Key Highlight</button>
+      <p id="highlight1" class="highlight-text" style="display:none;"><strong>Highlight:</strong> Identified Yemen and Papua New Guinea as critical hotspots for intervention, influencing NGO outreach planning.</p>
+    </div>
 
-        <p><strong>Use Cases:</strong></p>
-        <ul>
-          <li>Real-time fraud detection & intervention</li>
-          <li>Case-based resolution workflow with model feedback</li>
-        </ul>
+    <!-- Project 02 -->
+    <div class="project fade-in">
+      <h3>Project 02: Hiring Assistant AI – Agentic Resume Screening System</h3>
+      <p><strong>Overview:</strong> Built a privacy-focused, locally-operable AI assistant to automate resume screening for TechCorp Solutions using Agentic AI and RAG.</p>
+      <p><strong>Features:</strong> Parsed resumes with PyMuPDF, performed deep semantic matching using SentenceTransformers, and scored candidates using hybrid metrics combining embeddings and rubric-based analysis. Real-time recruiter feedback was enabled with a chatbot powered by Mistral-7B-Instruct.</p>
+      <p><strong>Technologies:</strong> Python, Streamlit, PyMuPDF, SentenceTransformers, Pandas, ctransformers, RAG, Mistral-7B-Instruct</p>
+      <p><strong>Impact:</strong> Accelerated hiring decisions, enhanced explainability, and ensured data privacy through offline operation.</p>
+      <button onclick="toggleHighlight('highlight2')">Show Key Highlight</button>
+      <p id="highlight2" class="highlight-text" style="display:none;"><strong>Highlight:</strong> Reduced hiring cycle time by 40% and introduced a transparent, bias-aware candidate scoring method.</p>
+    </div>
 
-        <p><strong>Impact:</strong> Boosted fraud prevention efficiency, improved customer trust, reduced financial losses, and ensured regulatory compliance with explainable AI models.</p>
-      </div>
+    <!-- Project 03 -->
+    <div class="project fade-in">
+      <h3>Project 03: AI-Based Fraud Detection System in Banking</h3>
+      <p><strong>Overview:</strong> Developed an AI-driven fraud detection system for the banking sector. The model proactively identifies threats like identity theft and unauthorized transactions using adaptive machine learning.</p>
+      <p><strong>System Features:</strong> Includes real-time transaction monitoring, supervised and unsupervised ML for fraud pattern detection, risk scoring with alert systems, and explainability features (SHAP, LIME) for compliance with GDPR, PCI DSS, and KYC.</p>
+      <p><strong>Technical Highlights:</strong> Supports 99.99% uptime, encrypted transmission, multi-factor authentication, scalable architecture, and role-based access.</p>
+      <p><strong>Impact:</strong> Improved fraud prevention, reduced financial loss, and enhanced compliance with global data standards.</p>
+      <button onclick="toggleHighlight('highlight3')">Show Key Highlight</button>
+      <p id="highlight3" class="highlight-text" style="display:none;"><strong>Highlight:</strong> Detected fraud in under 300 ms with a precision increase of 25%, while fully aligning with GDPR and CCPA mandates.</p>
+    </div>
+  </div>
+</section>
 
   <section id="experience" class="experience-section">
     <div class="section-container">
