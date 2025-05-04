@@ -24,14 +24,9 @@ As a Master’s in Business Analytics student at the University of North Texas I
 **University of North Texas, Denton, TX**  
 *Master of Science in Business Analytics* | GPA: 3.5 | *Expected: Dec 2025*  
 **Key Courses:** Data Visualization, Data Mining, Predictive Analysis, Business Statistics
-
-![G. Brint Ryan College of Business](./_blb.jpg)
-
 **St. Pious X Degree College, Hyderabad, India**  
 *Bachelor of Commerce in Computer Applications* | GPA: 4.0 | *Graduated: May 2023*  
 **Relevant Courses:** Financial Planning and Performance, E-Commerce, IFRS, Business Statistics, Cost Accounting, Business Economics
-
-![St. Pious College](./st.piousx.jpg)
 
 **Certifications:**  
 - Entrepreneurship Orientation Program (NSIC)  
